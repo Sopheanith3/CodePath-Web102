@@ -1,0 +1,31 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  font-family: monospace, Avenir, Helvetica, Arial, sans-serif;
+  color: #f3f4f6;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  font-size: 15px;
+}
+
+.Header {
+  width: 100%;
+  background-color: darkgray;
+  padding: 20px 0; /* Adjust padding as needed */
+  display: flex;
+  justify-content: center; /* Centers the text horizontally */
+}
+
+.logo {
+  font-size: 50px;
+  color: #000000;
+  margin: 0;
+}
