@@ -1,10 +1,10 @@
-# Web Development Project 1 - *Name of App Here*
+# Web Development Project 1 - *Angkor Temples in Cambodia*
 
-Submitted by: **Your Name Here**
+Submitted by: **Sopheantih Ny**
 
 This web app: **insert description**
 
-Time spent: **X** hours spent in total
+Time spent: **8** hours spent in total
 
 ## Required Features
 
