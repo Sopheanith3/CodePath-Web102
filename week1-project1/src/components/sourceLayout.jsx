@@ -6,7 +6,7 @@ const sourceLayout = () => {
         <div className="Container">
             <Card 
             imageURL="./src/image/AngkorWat.jpg"
-            name="Angkor Wat"
+            name="Angkor Wat Temple"
             description="Angkor Wat, located in Siem Reap, Cambodia, is the largest 
             religious monument in the world and a masterpiece of Khmer architecture."
             link="https://en.wikipedia.org/wiki/Angkor_Wat"
@@ -22,7 +22,7 @@ const sourceLayout = () => {
 
             <Card
             imageURL="./src/image/Banteay Srei.jpg"
-            name="Banteay Srei"
+            name="Banteay Srei Temple"
             description="Banteay Srei, located near Angkor in Cambodia, is a small yet highly detailed 
             temple built in the 10th century and dedicated to the Hindu god Shiva."
             link="https://en.wikipedia.org/wiki/Banteay_Srei"
@@ -30,7 +30,7 @@ const sourceLayout = () => {
 
             <Card
             imageURL="./src/image/Bakheng.jpg"
-            name="Phnom Bakheng"
+            name="Phnom Bakheng Temple"
             description="Phnom Bakheng is a Hindu and Buddhist
             temple located on a hilltop in the Angkor Archaeological Park near Siem Reap, Cambodia."
             link="https://en.wikipedia.org/wiki/Phnom_Bakheng"
@@ -38,7 +38,7 @@ const sourceLayout = () => {
 
             <Card
             imageURL="./src/image/PreahKhan.jpg"
-            name="Prasat Preah Khan"
+            name="Prasat Preah Khan Temple"
             description="Prasat Preah Khan is a historic temple located in the Angkor Archaeological Park near Siem Reap, Cambodia. Built in the late 12th century by King Jayavarman VII,
             it was originally constructed as a Buddhist monastery and university. "
             link="https://en.wikipedia.org/wiki/Preah_Khan"
