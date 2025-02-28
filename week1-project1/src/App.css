@@ -1,31 +1,93 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-  font-family: monospace, Avenir, Helvetica, Arial, sans-serif;
-  color: #f3f4f6;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
+.App {
+  width: 100%;
   min-height: 100vh;
-  font-size: 15px;
+  display: flex;
+  flex-direction: column;
 }
 
+/* Header styling */
 .Header {
   width: 100%;
-  background-color: darkgray;
-  padding: 20px 0; /* Adjust padding as needed */
+  background-color: rgb(255, 255, 255);
+  padding: 30px 0;
   display: flex;
-  justify-content: center; /* Centers the text horizontally */
+  justify-content: center;
 }
 
 .logo {
   font-size: 50px;
   color: #000000;
   margin: 0;
+}
+
+/* Container for cards */
+.Container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  gap: 30px;
+  padding: 50px;
+  margin: 0 auto;
+  max-width: 1280px;
+  background-color: rgb(180, 180, 180);
+}
+
+/* Card styling */
+.Card {
+  background-color: #000000;
+  padding-bottom: 20px;
+  box-shadow: 0px 8px 16px 0px rgba(192, 192, 192, 0.2);
+  font-size: medium;
+  border-radius: 10px;
+  backdrop-filter: blur(2px);
+  text-align: center;
+  margin-bottom: 10px;
+  width: 300px;
+  height: 430px;
+  display: flex;
+  flex-direction: column;
+  color: #f3f4f6;
+}
+
+.Card img {
+  height: 180px;
+  width: 100%;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.Card h3 {
+  margin: 10px 0;
+}
+
+.Card h5 {
+  padding: 0 15px;
+  margin-bottom: 15px;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.Card button {
+  background-color: #4682B4;
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.Card button:hover {
+  background-color: #3a6d96;
+}
+
+@media (max-width: 768px) {
+  .Container {
+    padding: 20px;
+  }
+  
+  .logo {
+    font-size: 30px;
+  }
 }
