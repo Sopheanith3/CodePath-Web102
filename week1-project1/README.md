@@ -1,30 +1,36 @@
-# Web Development Project 1 - *Name of App Here*
+# Web Development Project 1 - *Angkor Temples in Cambodia*
 
-Submitted by: **Your Name Here**
+Submitted by: **Sopheantih Ny**
 
-This web app: **insert description**
+This web app: **Is recommended for all the tourism that visit in Cambodia to see all the temples in SeimReap and the history about each temples.Visiting Siem Reap's temples is a must-do in Cambodia. T
+hese ancient sites, like Angkor Wat and Angkor Thom, reveal the Khmer Empire's history and stunning architecture. 
+Each temple, from the mysterious Ta Prohm to the detailed Banteay Srei, offers a unique and memorable experience.**
 
-Time spent: **X** hours spent in total
+Time spent: **8** hours spent in total
 
 ## Required Features
 
 The following **required** functionality is completed:
 
-- [ ] **There is a unique theme for events or resources relevant to a specific community**
-- [ ] **At least 10 unique resources or events are displayed in a responsive card format**
+- [x] **There is a unique theme for events or resources relevant to a specific community**
+- [x] **At least 10 unique resources or events are displayed in a responsive card format**
 
 The following **optional** features are implemented:
 
-- [ ] Buttons or links to a related resources are on each card component
-- [ ] The site is responsive for both desktop and mobile formats
+- [x] Buttons or links to a related resources are on each card component
+- [x] The site is responsive for both desktop and mobile formats
 
 The following **additional** features are implemented:
 
-* [ ] List anything else that you added to improve the site's functionality!
+* [x] List anything else that you added to improve the site's functionality!
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented required features:
+
+![project1](https://github.com/user-attachments/assets/7a1d8fb4-d32f-4049-950e-782714427381)
+
+
 
 <img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
@@ -37,11 +43,12 @@ GIF created with ...
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+Throughtout the project, I struggled with the organziing all the card and with the css grid for the specific view that I going for. I also want to maek sure that it displayed 4 card in each rows, and I also make sure the website
+is look clean and more easy for the user and the tourist to interact.
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright [2025] [Sopheanith Ny]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
