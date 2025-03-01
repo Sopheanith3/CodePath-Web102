@@ -28,6 +28,10 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented required features:
 
+![project1](https://github.com/user-attachments/assets/7a1d8fb4-d32f-4049-950e-782714427381)
+
+
+
 <img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
