@@ -39,7 +39,8 @@ GIF created with ...
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+Throughtout the project, I struggled with the organziing all the card and with the css grid for the specific view that I going for. I also want to maek sure that it displayed 4 card in each rows, and I also make sure the website
+is look clean and more easy for the user and the tourist to interact.
 
 ## License
 
