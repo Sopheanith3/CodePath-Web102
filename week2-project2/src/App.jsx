@@ -111,9 +111,7 @@ function App() {
                   </div>
                 </div>
                 <div className="card-back">
-                  <div className="card-content">
-                    {cards[currentCardIndex].answer}
-                  </div>
+                  <div className="card-content">{cards[currentCardIndex].answer}</div>
                 </div>
               </div>
             </div>
