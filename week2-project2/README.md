@@ -38,10 +38,10 @@ GIF created with ...
 
 ## Notes
 
-Describe any challenges encountered while building the app, I struggle with ensuring the grid and the container box of the card, which I mean I lack of css skills. Especailly on the 
-card flip animation I want to be flip and I needed to be do some research on how to do it. Working with CSS is not something easy I need more practice on it more. 
+Describe any challenges encountered while building the app. . 
 
-Thorught out the challenges working on the project 2, 
+Thorught out the challenges working on the project 2, I struggle with ensuring the grid and the container box of the card, which I mean I lack of css skills. Especailly on the 
+card flip animation I want to be flip and I needed to be do some research on how to do it. Working with CSS is not something easy I need more practice on it more
 
 ## License
 
