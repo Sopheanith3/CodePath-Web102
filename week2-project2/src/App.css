@@ -5,35 +5,46 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  margin-top: 50px;
+}
+
 .App {
   display: flex;
   justify-content: center;
   align-items: center;
   min-width: 100vh;
-  background-color:  #646464;
-  /* background-image:; */
+  background-color: #ffffff;
   background-size: cover;
-  background-position: center;
-} 
+  background-position: center;} 
 
 .Container {
   width: 100%;
   max-width: 600px;
   text-align: center;
   padding: 20px;
+  height: 100%;
+  width: 100%;
 }
 
 h1 {
   font-size: 24px;
   margin-bottom: 10px;
+  color: #020202;
+
 }
 
 .subtitle {
   margin-bottom: 15px;
+  color: #020202;
 }
 
 .card-count {
-  background-color: black;
+  background-color: rgb(66, 60, 60);
   border-radius: 10px;
   padding: 40px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -51,7 +62,7 @@ h1 {
   padding: 10px 30px;
   font-size: 18px;
   background-color: #333;
-  color: white;
+  color: rgb(192, 192, 192);
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -62,7 +73,7 @@ h1 {
 }
 
 .card {
-  background-color: white;
+  background-color: rgb(151, 151, 151);
   height: 300px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -103,5 +114,5 @@ h1 {
 
 /* Optional animation for card flip */
 .card.flipped {
-  background-color: #f8f8f8;
+  background-color: #6e6e6e;
 }
