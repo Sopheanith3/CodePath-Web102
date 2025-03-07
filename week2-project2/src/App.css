@@ -111,9 +111,14 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: background-color 0.3s, transform 0.2s;
 }
 
-/* Optional animation for card flip */
+.nav-button:hover {
+  background-color: #575757;
+  transform: scale(1.1);
+}
+
 .card.flipped {
   background-color: #6e6e6e;
 }
