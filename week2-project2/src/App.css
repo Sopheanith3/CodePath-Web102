@@ -103,11 +103,11 @@ h1 {
 }
 
 .card-front {
-  background-color: rgb(151, 151, 151);
+  background-color: rgb(255, 255, 255);
 }
 
 .card-back {
-  background-color: #6e6e6e;
+  background-color: #dadada;
   transform: rotateY(180deg);
 }
 
@@ -117,8 +117,9 @@ h1 {
 
 .card-content {
   padding: 20px;
-  font-size: 18px;
+  font-size: 20px;
   max-width: 90%;
+  color: black;
 }
 
 .button-container {

@@ -34,8 +34,7 @@ function App() {
       answer: 'To perform side effects in functional components.',
     },
     {
-      id: 7,
-      question: 'What is the purpose of keys in React lists?',
+      id: 7,      question: 'What is the purpose of keys in React lists?',
       answer: 'To help React identify which items have changed, added, or removed.',
     },
     {
