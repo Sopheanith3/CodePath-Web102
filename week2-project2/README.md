@@ -31,7 +31,6 @@ Adding more picture, a new background maybe adding some hover effecct on the not
 
 Here's a walkthrough of implemented required features:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 ![FlashCard](https://github.com/user-attachments/assets/93ebd12d-1236-4525-94e6-895501786b6c)
 
 GIF created with ...  
