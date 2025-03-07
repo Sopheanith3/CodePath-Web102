@@ -89,8 +89,8 @@ function App() {
   return (
     <div className="App">
       <div className="Container">
-        <h1>The Ultimate Plant Parent!</h1>
-        <p className="subtitle">How good of a plant parent are you? Test all of your planty knowledge here!</p>
+        <h1>React Knowledge for Beginner Quiz!</h1>
+        <p className="subtitle">How well do you understand React fundamentals? Challenge your knowledge with this interactive quiz!</p>
         <p className="card-count">Number of cards: {cards.length}</p>
 
         {!hasStart ? (
