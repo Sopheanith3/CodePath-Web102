@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './App.css';
 
 function App() {
@@ -104,8 +104,17 @@ function App() {
         ) : (
           <div className="card-container">
             <div className={`card ${isFlip ? 'flipped' : ''}`} onClick={handleCardClick}>
-              <div className="card-content">
-                {isFlip ? cards[currentCardIndex].answer : cards[currentCardIndex].question}
+              <div className="card-inner">
+                <div className="card-front">
+                  <div className="card-content">
+                    {cards[currentCardIndex].question}
+                  </div>
+                </div>
+                <div className="card-back">
+                  <div className="card-content">
+                    {cards[currentCardIndex].answer}
+                  </div>
+                </div>
               </div>
             </div>
 
