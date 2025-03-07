@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 
 function App() {
@@ -58,19 +58,31 @@ function App() {
   const [currentCardIndex, setCurrentCardIndex] = useState(0);
   const [isFlip, setFlip] = useState(false);
   const [hasStart, setStart] = useState(false);
+  const [cardHistory, setCardHistory] = useState([]); 
 
   const handleCardClick = () => {
     setFlip(!isFlip);
   };
 
   const getNextCard = () => {
+    setCardHistory(prevHistory => [...prevHistory, currentCardIndex]);
     const randomIndex = Math.floor(Math.random() * cards.length);
     setCurrentCardIndex(randomIndex);
     setFlip(false);
   };
 
+  const getPreviousCard = () => {
+    if (cardHistory.length > 0) {
+      const prevIndex = cardHistory[cardHistory.length - 1];
+      setCurrentCardIndex(prevIndex);
+      setCardHistory(prevHistory => prevHistory.slice(0, -1));
+      setFlip(false);
+    }
+  };
+
   const startQuiz = () => {
     setStart(true);
+    setCardHistory([]);
     getNextCard();
   };
 
@@ -85,7 +97,7 @@ function App() {
           <div className="start-screen">
             <div className="start-button-container">
               <button className="start-button" onClick={startQuiz}>
-                Start!
+                Start
               </button>
             </div>
           </div>
@@ -98,7 +110,11 @@ function App() {
             </div>
 
             <div className="button-container">
-              <button className="nav-button prev-button" onClick={() => {}}>
+              <button 
+                className="nav-button prev-button" 
+                onClick={getPreviousCard}
+                disabled={cardHistory.length === 0} 
+              >
                 ←
               </button>
               <button className="nav-button next-button" onClick={getNextCard}>

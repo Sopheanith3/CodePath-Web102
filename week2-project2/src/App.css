@@ -20,7 +20,8 @@ html, body, #root {
   min-width: 100vh;
   background-color: #ffffff;
   background-size: cover;
-  background-position: center;} 
+  background-position: center;
+} 
 
 .Container {
   width: 100%;
