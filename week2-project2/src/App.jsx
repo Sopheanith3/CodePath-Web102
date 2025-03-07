@@ -1,33 +1,66 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [cards, setCount] = useState([ 
+  {
+    id: 1,
+    question: "What is JSX?",
+    answer: "A syntax extension for JavaScript that allows you to write HTML -like code within JavaScript.",
+  },
+  {
+    id: 2,
+    question: "What is a React component?",
+    answer: "A reusable piece of UI that represent a part of the application",
+  },
+  {
+    id:3,
+    question: "What is the purpose of props in React?",
+    answer: "To pass data from a parent component to a child compnonet.",
+  },
+  {
+    id: 4,
+    question: "What is state in React?",
+    answer: "Data that can change over time within a component, triggering re-renders",
+
+  },
+  {
+    id: 5,
+    question: "What is the purpose of props in React?",
+    answer: " To pass data from a parent component to a child component.",
+  },
+  {
+    id: 6,
+    question: "What is the useEffect hook used for?",
+    answer: "To add state to functional components.",
+  },
+  {
+    id: 7,
+    question: "What is the purpose of keys in React lists?",
+    answer: "To help React identify whichi item have changed, added, or removed.",
+  },
+  {
+    id: 8,
+    question: "What is component composition?",
+    answer: "Building complex UIs by combining simpler components.",
+  },
+  {
+    id: 9,
+    question: "What is the main difference between props and state?",
+    answer: "Props are immutable (read-only), state can be changed within a component.",
+  },
+  {
+    id: 10,
+    question: "What is the difference between functional and class components?",
+    answer: "Functional components are functions, class components are classes with a render method.",
+  },
+  ]);
+
+
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+
     </>
   )
 }
