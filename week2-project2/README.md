@@ -1,51 +1,52 @@
-# Web Development Project 2 - *Name of App Here*
+# Web Development Project 2 - *React Knowledge for beginner Flashcard*
 
-Submitted by: **Your Name Here**
+Submitted by: **Sopheanith Ny**
 
-This web app: **insert description**
+This web app: **6**
 
-Time spent: **X** hours spent in total
+Time spent: **6** hours spent in total
 
 ## Required Features
 
 The following **required** functionality is completed:
 
-- [ ] **The title of the card set and some information about it, such as a short description and the total number of cards are displayed**
-- [ ] **A single card at a time is displayed, only showing one of the components of the information pair**
-- [ ] **A list of card pairs is created**
-- [ ] **Clicking on the card shows the corresponding component of the information pair**
-- [ ] **Clicking the next button displays a random new card**
+- [x] **The title of the card set and some information about it, such as a short description and the total number of cards are displayed**
+- [x] **A single card at a time is displayed, only showing one of the components of the information pair**
+- [x] **A list of card pairs is created**
+- [x] **Clicking on the card shows the corresponding component of the information pair**
+- [x] **Clicking the next button displays a random new card**
 
 The following **optional** features are implemented:
 
 - [ ] Cards contains images in addition to or in place of text
-- [ ] Cards have different visual styles such as color based on their category
-  - [ ] *visual style implemented*
+- [x] Cards have different visual styles such as color based on their category
+- [x] *visual style implemented*
 
 The following **additional** features are implemented:
 
-* [ ] List anything else that you added to improve the site's functionality!
+* [x] List anything else that you added to improve the site's functionality!
+Adding more picture, a new background maybe adding some hover effecct on the notecard.
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented required features:
 
 <img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+![FlashCard](https://github.com/user-attachments/assets/93ebd12d-1236-4525-94e6-895501786b6c)
 
-<!-- Replace this with whatever GIF tool you used! -->
 GIF created with ...  
-<!-- Recommended tools:
-[Kap](https://getkap.co/) for macOS
-[ScreenToGif](https://www.screentogif.com/) for Windows
-[peek](https://github.com/phw/peek) for Linux. -->
+
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+Describe any challenges encountered while building the app, I struggle with ensuring the grid and the container box of the card, which I mean I lack of css skills. Especailly on the 
+card flip animation I want to be flip and I needed to be do some research on how to do it. Working with CSS is not something easy I need more practice on it more. 
+
+Thorught out the challenges working on the project 2, 
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright [2025] [Sopheanith Ny]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
