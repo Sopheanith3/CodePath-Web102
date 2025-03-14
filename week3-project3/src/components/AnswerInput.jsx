@@ -18,7 +18,6 @@ const AnswerInput = forwardRef(function AnswerInput({correctAnswer, onCorrectAns
     };
     
     const checkAnswer = () => {
-        // Basic answer validation (case-insensitive matching)
         const isCorrect = userAnswer.trim().toLowerCase() === correctAnswer.trim().toLowerCase();
         
         setHasSubmitted(true);

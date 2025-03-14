@@ -5,7 +5,7 @@ import AnswerInput from './components/AnswerInput';
 import ShuffleButton from './components/ShuffleButton';
 
 function App() {
-  const [cards] = useState([
+  const [cards, setCards] = useState([
     {
       id: 1,
       question: 'What is JSX?',
@@ -58,23 +58,15 @@ function App() {
     },
   ]);
 
-const [currentCardIndex, setCurrentCardIndex] = useState(0);
-const [isFlip, setFlip] = useState(false);
+  const [currentCardIndex, setCurrentCardIndex] = useState(0);
+  const [isFlip, setFlip] = useState(false);
   const [hasStart, setStart] = useState(false);
   const [cardHistory, setCardHistory] = useState([]);
   const [hasGuessed, setHasGuessed] = useState(false);
-  
   const answerInputRef = useRef(null);
 
-  // Function to handle correct answers
-  const handleCorrectAnswer = () => {
-    setHasGuessed(true);
-  };
-
-  // Function to handle incorrect answers
-  const handleIncorrectAnswer = () => {
-    setHasGuessed(true);
-  };
+  const handleCorrectAnswer = () => setHasGuessed(true);
+  const handleIncorrectAnswer = () => setHasGuessed(true);
 
   const handleCardClick = () => {
     if (hasGuessed) {
@@ -89,37 +81,32 @@ const [isFlip, setFlip] = useState(false);
     setFlip(false);
     setHasGuessed(false);
     
-    // Reset the answer input
-    if (answerInputRef.current && answerInputRef.current.resetInput) {
+    if (answerInputRef.current?.resetInput) {
       answerInputRef.current.resetInput();
     }
   };
 
   const getPreviousCard = () => {
     if (cardHistory.length > 0) {
-      const prevIndex = cardHistory[cardHistory.length - 1];
+      const prevIndex = cardHistory.pop();
       setCurrentCardIndex(prevIndex);
-      setCardHistory(prevHistory => prevHistory.slice(0, -1));
+      setCardHistory([...cardHistory]);
       setFlip(false);
       setHasGuessed(false);
       
-      // Reset the answer input
-      if (answerInputRef.current && answerInputRef.current.resetInput) {
+      if (answerInputRef.current?.resetInput) {
         answerInputRef.current.resetInput();
       }
     }
   };
-
   const shuffleCards = () => {
-    // Create a copy of the cards array and shuffle it
     const shuffled = [...cards].sort(() => Math.random() - 0.5);
     setCards(shuffled);
     setCurrentCardIndex(0);
     setCardHistory([]);
     setFlip(false);
     setHasGuessed(false);
-    
-    // Reset the answer input
+
     if (answerInputRef.current && answerInputRef.current.resetInput) {
       answerInputRef.current.resetInput();
     }
@@ -140,20 +127,14 @@ const [isFlip, setFlip] = useState(false);
 
         {!hasStart ? (
           <div className="start-screen">
-            <div className="start-button-container">
-              <button className="start-button" onClick={startQuiz}>
-                Start
-              </button>
-            </div>
+            <button className="start-button" onClick={startQuiz}>Start</button>
           </div>
         ) : (
           <div className="card-container">
             <div className={`card ${isFlip ? 'flipped' : ''}`} onClick={handleCardClick}>
               <div className="card-inner">
                 <div className="card-front">
-                  <div className="card-content">
-                    {cards[currentCardIndex].question}
-                  </div>
+                  <div className="card-content">{cards[currentCardIndex].question}</div>
                 </div>
                 <div className="card-back">
                   <div className="card-content">{cards[currentCardIndex].answer}</div>
@@ -164,7 +145,7 @@ const [isFlip, setFlip] = useState(false);
             {!isFlip && (
               <div className="answer-section">
                 <p>Guess the answer here:</p>
-                <AnswerInput 
+                <AnswerInput
                   ref={answerInputRef}
                   correctAnswer={cards[currentCardIndex].answer}
                   onCorrectAnswer={handleCorrectAnswer}
@@ -174,17 +155,9 @@ const [isFlip, setFlip] = useState(false);
             )}
 
             <div className="button-container">
-              <button 
-                className="nav-button prev-button" 
-                onClick={getPreviousCard}
-                disabled={cardHistory.length === 0} 
-              >
-                ←
-              </button>
-              <ShuffleButton onClick={shuffleCards} />
-              <button className="nav-button next-button" onClick={getNextCard}>
-                →
-              </button>
+              <button className="nav-button prev-button" onClick={getPreviousCard} disabled={cardHistory.length === 0}>←</button>
+              <ShuffleButton onClick={shuffleCards}/>
+              <button className="nav-button next-button" onClick={getNextCard}>→</button>
             </div>
           </div>
         )}
