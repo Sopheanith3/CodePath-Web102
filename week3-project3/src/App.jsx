@@ -1,5 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import './App.css';
+import './AnswerInput.css';
+import AnswerInput from './components/AnswerInput';
+import ShuffleButton from './components/ShuffleButton';
 
 function App() {
   const [cards] = useState([
@@ -34,7 +37,8 @@ function App() {
       answer: 'To perform side effects in functional components.',
     },
     {
-      id: 7,      question: 'What is the purpose of keys in React lists?',
+      id: 7,
+      question: 'What is the purpose of keys in React lists?',
       answer: 'To help React identify which items have changed, added, or removed.',
     },
     {
@@ -54,13 +58,28 @@ function App() {
     },
   ]);
 
-  const [currentCardIndex, setCurrentCardIndex] = useState(0);
-  const [isFlip, setFlip] = useState(false);
+const [currentCardIndex, setCurrentCardIndex] = useState(0);
+const [isFlip, setFlip] = useState(false);
   const [hasStart, setStart] = useState(false);
-  const [cardHistory, setCardHistory] = useState([]); 
+  const [cardHistory, setCardHistory] = useState([]);
+  const [hasGuessed, setHasGuessed] = useState(false);
+  
+  const answerInputRef = useRef(null);
+
+  // Function to handle correct answers
+  const handleCorrectAnswer = () => {
+    setHasGuessed(true);
+  };
+
+  // Function to handle incorrect answers
+  const handleIncorrectAnswer = () => {
+    setHasGuessed(true);
+  };
 
   const handleCardClick = () => {
-    setFlip(!isFlip);
+    if (hasGuessed) {
+      setFlip(!isFlip);
+    }
   };
 
   const getNextCard = () => {
@@ -68,6 +87,12 @@ function App() {
     const randomIndex = Math.floor(Math.random() * cards.length);
     setCurrentCardIndex(randomIndex);
     setFlip(false);
+    setHasGuessed(false);
+    
+    // Reset the answer input
+    if (answerInputRef.current && answerInputRef.current.resetInput) {
+      answerInputRef.current.resetInput();
+    }
   };
 
   const getPreviousCard = () => {
@@ -76,6 +101,27 @@ function App() {
       setCurrentCardIndex(prevIndex);
       setCardHistory(prevHistory => prevHistory.slice(0, -1));
       setFlip(false);
+      setHasGuessed(false);
+      
+      // Reset the answer input
+      if (answerInputRef.current && answerInputRef.current.resetInput) {
+        answerInputRef.current.resetInput();
+      }
+    }
+  };
+
+  const shuffleCards = () => {
+    // Create a copy of the cards array and shuffle it
+    const shuffled = [...cards].sort(() => Math.random() - 0.5);
+    setCards(shuffled);
+    setCurrentCardIndex(0);
+    setCardHistory([]);
+    setFlip(false);
+    setHasGuessed(false);
+    
+    // Reset the answer input
+    if (answerInputRef.current && answerInputRef.current.resetInput) {
+      answerInputRef.current.resetInput();
     }
   };
 
@@ -115,6 +161,18 @@ function App() {
               </div>
             </div>
 
+            {!isFlip && (
+              <div className="answer-section">
+                <p>Guess the answer here:</p>
+                <AnswerInput 
+                  ref={answerInputRef}
+                  correctAnswer={cards[currentCardIndex].answer}
+                  onCorrectAnswer={handleCorrectAnswer}
+                  onIncorrectAnswer={handleIncorrectAnswer}
+                />
+              </div>
+            )}
+
             <div className="button-container">
               <button 
                 className="nav-button prev-button" 
@@ -123,6 +181,7 @@ function App() {
               >
                 ←
               </button>
+              <ShuffleButton onClick={shuffleCards} />
               <button className="nav-button next-button" onClick={getNextCard}>
                 →
               </button>

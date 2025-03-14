@@ -1,0 +1,61 @@
+.answer-input-container {
+    width: 100%;
+    margin: 15px 0;
+}
+  
+.input-wrapper {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+  
+.answer-input {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-family: "Kanit", sans-serif;
+    font-size: 16px;
+}
+  
+.submit-button {
+    padding: 10px 15px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+  
+.submit-button:hover:not(:disabled) {
+    background-color: #575757;
+}
+  
+.submit-button:disabled {
+    background-color: #999;
+    cursor: not-allowed;
+}
+  
+.submit-button.correct {
+    background-color: #4caf50;
+}
+  
+.submit-button.incorrect {
+    background-color: #f44336;
+}
+  
+.feedback-message {
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: 500;
+}
+  
+.correct-feedback {
+    background-color: rgba(76, 175, 80, 0.2);
+    color: #2e7d32;
+}
+  
+.incorrect-feedback {
+    background-color: rgba(244, 67, 54, 0.2);
+    color: #c62828;
+}
