@@ -33,6 +33,7 @@ A user can mark a card that they have mastered and have it removed from the pool
 
 Here's a walkthrough of implemented user stories:
 
+![gif project3](https://github.com/user-attachments/assets/4cc02b97-6986-4af9-ba0b-9a287be5a341)
 
 
 <!-- Replace this with whatever GIF tool you used! -->
