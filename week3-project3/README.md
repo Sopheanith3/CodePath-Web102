@@ -1,10 +1,10 @@
-# Web Development Project 2 - *React Knowledge for beginner Flashcard Part2*
+# Web Development Project 3 - *React Knowledge for beginner Flashcard Part2*
 
-Submitted by: **Your Name Here**
+Submitted by: **Sopheanith Ny**
 
 This web app: **insert description**
 
-Time spent: **X** hours spent in total
+Time spent: **8** hours spent in total
 
 ## Required Features
 
