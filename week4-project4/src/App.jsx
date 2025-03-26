@@ -29,7 +29,6 @@ function App() {
       const data = await response.json();
       
       if (data && data.length > 0) {
-        // Get more details about the breed
         const breedId = data[0].breeds[0].id;
         const breedResponse = await fetch(`https://api.thecatapi.com/v1/breeds/${breedId}`, {
           headers: {
@@ -37,22 +36,18 @@ function App() {
           }
         });
         const breedData = await breedResponse.json();
-        
-        // Combine data
+      
         const catWithDetails = {
           ...data[0],
           breedDetails: breedData
         };
         
-        // Check if the cat matches any attributes in the ban list
         const isBanned = checkIfBanned(catWithDetails);
         
         if (isBanned) {
-          // If banned, fetch another cat
           fetchRandomCat();
         } else {
           setCurrentItem(catWithDetails);
-          // Add to history
           setHistory(prevHistory => [catWithDetails, ...prevHistory]);
         }
       } else {
@@ -66,7 +61,6 @@ function App() {
     setIsLoading(false);
   };
 
-  // Check if an item is banned based on its attributes
   const checkIfBanned = (item) => {
     if (!item.breeds || item.breeds.length === 0) return false;
     
@@ -85,11 +79,8 @@ function App() {
     });
   };
 
-  // Add an attribute to the ban list
   const addToBanList = (attribute, value) => {
     if (!attribute || !value) return;
-    
-    // Check if already in ban list
     const alreadyBanned = banList.some(item => 
       item.attribute === attribute && item.value === value
     );
@@ -98,15 +89,12 @@ function App() {
       setBanList([...banList, { attribute, value }]);
     }
   };
-
-  // Remove an attribute from the ban list
   const removeFromBanList = (index) => {
     const updatedBanList = [...banList];
     updatedBanList.splice(index, 1);
     setBanList(updatedBanList);
   };
 
-  // Initialize with a random cat when the component mounts
   useEffect(() => {
     fetchRandomCat();
   }, []);
