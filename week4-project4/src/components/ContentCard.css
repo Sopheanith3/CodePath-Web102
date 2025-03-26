@@ -101,3 +101,25 @@
     line-height: 1.5;
     color: #555;
 }
+  
+.discover-button {
+    background-color: #4a4a4a;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 20px auto 0; 
+    display: block; 
+    transition: background-color 0.3s;
+}
+  
+.discover-button:hover {
+    background-color: #333;
+}
+  
+.discover-button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}

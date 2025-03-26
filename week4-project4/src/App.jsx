@@ -31,7 +31,11 @@ function App() {
       if (data && data.length > 0) {
         // Get more details about the breed
         const breedId = data[0].breeds[0].id;
-        const breedResponse = await fetch(`https://api.thecatapi.com/v1/breeds/${breedId}`);
+        const breedResponse = await fetch(`https://api.thecatapi.com/v1/breeds/${breedId}`, {
+          headers: {
+            'x-api-key': apiKey
+          }
+        });
         const breedData = await breedResponse.json();
         
         // Combine data
@@ -120,14 +124,6 @@ function App() {
             onDiscover={fetchRandomCat}
             onAddToBanList={addToBanList}
           />
-          
-          <button 
-            className="discover-button" 
-            onClick={fetchRandomCat} 
-            disabled={isLoading}
-          >
-            {isLoading ? 'Loading...' : 'Discover!'}
-          </button>
         </div>
         
         <div className="sidebar">

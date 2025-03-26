@@ -1,12 +1,19 @@
 import React from 'react';
 import './ContentCard.css';
 
-function ContentCard({ item, isLoading, error, onAddToBanList }) {
+function ContentCard({ item, isLoading, error, onAddToBanList, onDiscover }) {
   if (isLoading) {
     return (
       <div className="content-card loading">
         <div className="loading-spinner"></div>
         <p>Finding an amazing cat for you...</p>
+        <button 
+          className="discover-button" 
+          onClick={onDiscover} 
+          disabled={isLoading}
+        >
+          {isLoading ? 'Loading...' : 'Discover!'}
+        </button>
       </div>
     );
   }
@@ -15,6 +22,13 @@ function ContentCard({ item, isLoading, error, onAddToBanList }) {
     return (
       <div className="content-card error">
         <p>{error}</p>
+        <button 
+          className="discover-button" 
+          onClick={onDiscover} 
+          disabled={isLoading}
+        >
+          Try Again
+        </button>
       </div>
     );
   }
@@ -23,6 +37,13 @@ function ContentCard({ item, isLoading, error, onAddToBanList }) {
     return (
       <div className="content-card empty">
         <p>No cat data available. Click "Discover!" to find a cat.</p>
+        <button 
+          className="discover-button" 
+          onClick={onDiscover} 
+          disabled={isLoading}
+        >
+          Discover!
+        </button>
       </div>
     );
   }
@@ -79,6 +100,14 @@ function ContentCard({ item, isLoading, error, onAddToBanList }) {
         <div className="description">
           <p>{breed.description}</p>
         </div>
+        
+        <button 
+          className="discover-button" 
+          onClick={onDiscover} 
+          disabled={isLoading}
+        >
+          {isLoading ? 'Loading...' : 'Discover!'}
+        </button>
       </div>
     </div>
   );
