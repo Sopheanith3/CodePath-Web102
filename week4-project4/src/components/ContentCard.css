@@ -70,18 +70,18 @@
   
 .clickable {
     cursor: pointer;
-    text-decoration: underline dotted;
     transition: color 0.2s;
 }
   
 .clickable:hover {
-    color: #0066cc;
+    color: #c75b5b;
 }
   
 .temperament-tags {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
+    margin-left: 15px;
 }
   
 .temperament-tag {

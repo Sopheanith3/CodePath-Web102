@@ -3,11 +3,9 @@ import './History.css';
 
 function History({ history }) {
   if (history.length <= 1) {
-    return null; // Don't show history if there's only the current item
+    return null;
   }
-
-  // Skip the first item (current one)
-  const previousItems = history.slice(1, 4); // Show up to 3 previous items
+  const previousItems = history.slice(1, 6); 
 
 return (
     <div className="history-container">
