@@ -1,4 +1,4 @@
-# Web Development Project 4 - *Veni Vici!*
+![1](https://github.com/user-attachments/assets/0705883e-3ebe-4e00-a880-85045b8ba9e0)# Web Development Project 4 - *Veni Vici!*
 
 Submitted by: **Sopheanith Ny**
 
@@ -44,10 +44,14 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+![1](https://github.com/user-attachments/assets/b4901647-1ab4-499d-a249-81383cf220ac)
+
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ...  
+
+
+
 <!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
 [ScreenToGif](https://www.screentogif.com/) for Windows
