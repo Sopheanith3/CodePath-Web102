@@ -1,4 +1,4 @@
-![1](https://github.com/user-attachments/assets/0705883e-3ebe-4e00-a880-85045b8ba9e0)# Web Development Project 4 - *Veni Vici!*
+# Web Development Project 4 - *Veni Vici!*
 
 Submitted by: **Sopheanith Ny**
 
