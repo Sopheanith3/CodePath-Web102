@@ -38,8 +38,9 @@ function App() {
   console.log("Filtered results:", filteredResults.length);
 
   return(
+    <>
+    {/* <SideNav /> */}
     <div className="whole-page">
-      {/* <SideNav /> */}
       <h1>My Crypto List</h1>
       <input
         type="text"
@@ -71,7 +72,8 @@ function App() {
           }
         </ul>
     </div>
+    </>
   )
 }
 
-export default App
+export default App;
