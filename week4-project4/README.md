@@ -59,7 +59,7 @@ GIF created with ...
 
 ## Notes
 
-This app is really challenging and its my second time working with the API and I think its going good for me. The thing that I went through is the CSS grid I need to place it well and more organized. I think the rest is fine I understood of how the API documentation work well and I also make seperate class for example like header, card, ban section and previous discover. 
+This app presented a significant challenge, marking my second experience working with APIs, but I'm pleased with the progress I've made. The most difficult aspect was implementing CSS grid layouts to ensure everything was well-positioned and organized throughout the interface. Despite these challenges, I successfully understood the API documentation and properly implemented its functionality. I took a structured approach to component architecture by creating separate, modular classes for distinct UI elements including the header, content cards, ban list section, and previously discovered items. This organization helped maintain clean code separation and made the development process more manageable. The resulting application successfully allows users to discover random cat breeds and filter their preferences through the ban list functionality as required. 
 
 ## License
 
