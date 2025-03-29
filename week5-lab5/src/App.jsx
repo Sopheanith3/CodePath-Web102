@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import CoinInfo from './Components/CoinInfo';
+import SideNav from "./Components/SideNav";
 import './App.css'
 
 function App() {
@@ -38,6 +39,7 @@ function App() {
 
   return(
     <div className="whole-page">
+      {/* <SideNav /> */}
       <h1>My Crypto List</h1>
       <input
         type="text"

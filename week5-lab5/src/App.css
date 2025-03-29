@@ -6,23 +6,69 @@ body {
   color: #333;
 }
 
+/* Fixed sidebar positioning */
+.sidenav {
+  height: 100%;
+  width: 22%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #232323;
+  padding: 15px 10px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  z-index: 10;
+  box-sizing: border-box;
+}
+
+.sidenav h1 {
+  color: #61dafb;
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 28px;
+}
+
+/* Fixed main content area */
 .whole-page {
   margin-left: 25%;
   padding: 20px;
+  box-sizing: border-box;
+  width: 75%;
+  position: relative;
+  z-index: 5;
 }
 
+/* Centered title across entire screen */
 h1 {
   color: #2a71d0;
   margin-bottom: 20px;
+  position: relative;
+  left: -12.5%; /* Half of the sidebar width (25%) */
+  width: 100%; /* Full width of .whole-page */
+  text-align: center;
 }
 
+/* Centered search bar container */
+.search-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+/* Search bar styling */
 input[type="text"] {
   width: 50%;
   padding: 10px;
-  margin-bottom: 20px;
   border: 1px solid #ddd;
   border-radius: 4px;
   font-size: 16px;
+  position: relative;
+  z-index: 5;
 }
 
 ul {
@@ -32,9 +78,11 @@ ul {
   flex-wrap: wrap;
   gap: 15px;
   justify-content: flex-start;
+  position: relative;
+  z-index: 5;
 }
 
-/* Coin item styling - MODIFIED FOR SHORTER BARS */
+/* Coin item styling */
 .main-list {
   display: flex;
   align-items: center;
@@ -44,10 +92,10 @@ ul {
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
-  width: calc(25% - 15px); /* Changed from 33.333% to make narrower */
-  min-width: 200px; /* Reduced from 250px */
-  max-width: 300px; /* Added max-width to prevent stretching */
-  flex-grow: 0; /* Prevent expanding to fill space */
+  width: calc(25% - 15px);
+  min-width: 200px;
+  max-width: 300px;
+  flex-grow: 0;
   justify-content: space-between;
 }
 
@@ -64,30 +112,7 @@ ul {
 
 .tab {
   display: inline-block;
-  margin-left: 20px; /* Reduced from 75px */
-}
-
-/* Side navigation styling */
-.sidenav {
-  height: 100%;
-  width: 25%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  background-color: #232323;
-  padding: 15px 10px;
-  overflow-y: scroll;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: white;
-}
-
-.sidenav h1 {
-  color: #61dafb;
-  margin-bottom: 30px;
-  text-align: center;
+  margin-left: 20px;
 }
 
 /* Crypto scam styling */
@@ -124,7 +149,7 @@ ul {
   word-break: break-all;
 }
 
-/* Responsive adjustments */
+/* Improved responsive adjustments */
 @media (max-width: 1200px) {
   .main-list {
     width: calc(33.333% - 15px);
@@ -135,6 +160,15 @@ ul {
   .main-list {
     width: calc(50% - 15px);
   }
+  
+  .whole-page {
+    margin-left: 28%;
+    width: 72%;
+  }
+  
+  h1 {
+    left: -14%; /* Adjusted for the new margin */
+  }
 }
 
 @media (max-width: 768px) {
@@ -142,10 +176,18 @@ ul {
     width: 100%;
     height: auto;
     position: relative;
+    padding: 10px;
   }
   
   .whole-page {
     margin-left: 0;
+    width: 100%;
+    padding: 15px;
+  }
+  
+  h1 {
+    left: 0; /* Reset the negative margin on mobile */
+    width: 100%;
   }
   
   input[type="text"] {
