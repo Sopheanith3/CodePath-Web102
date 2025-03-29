@@ -55,7 +55,7 @@ GIF created with ...
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+This app is really challenging and its my second time working with the API and I think its going good for me. The thing that I went through is the CSS grid I need to place it well and more organized. I think the rest is fine I understood of how the API documentation work well and I also make seperate class for example like header, card, ban section and previous discover. 
 
 ## License
 
