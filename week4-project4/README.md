@@ -2,9 +2,9 @@
 
 Submitted by: **Sopheanith Ny**
 
-This web app: **insert description**
+This web app: **This display random cat breeds with their images and characteristics, allowing users to discover new cat breeds while creating a customized ban list for attributes they don't want to see again.**
 
-Time spent: **X** hours spent in total
+Time spent: **10** hours spent in total
 
 ## Required Features
 
@@ -59,7 +59,7 @@ Describe any challenges encountered while building the app.
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright [2025] [Sopheanith Ny]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
