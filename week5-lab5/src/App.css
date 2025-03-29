@@ -1,4 +1,3 @@
-
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
@@ -35,7 +34,7 @@ ul {
   justify-content: flex-start;
 }
 
-/* Coin item styling */
+/* Coin item styling - MODIFIED FOR SHORTER BARS */
 .main-list {
   display: flex;
   align-items: center;
@@ -45,9 +44,11 @@ ul {
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
-  width: calc(33.333% - 15px);
-  min-width: 250px;
-  flex-grow: 1;
+  width: calc(25% - 15px); /* Changed from 33.333% to make narrower */
+  min-width: 200px; /* Reduced from 250px */
+  max-width: 300px; /* Added max-width to prevent stretching */
+  flex-grow: 0; /* Prevent expanding to fill space */
+  justify-content: space-between;
 }
 
 .main-list:hover {
@@ -63,7 +64,7 @@ ul {
 
 .tab {
   display: inline-block;
-  margin-left: 75px;
+  margin-left: 20px; /* Reduced from 75px */
 }
 
 /* Side navigation styling */
@@ -126,6 +127,12 @@ ul {
 /* Responsive adjustments */
 @media (max-width: 1200px) {
   .main-list {
+    width: calc(33.333% - 15px);
+  }
+}
+
+@media (max-width: 992px) {
+  .main-list {
     width: calc(50% - 15px);
   }
 }
@@ -147,6 +154,7 @@ ul {
   
   .main-list {
     width: 100%;
+    max-width: none;
   }
   
   ul {
