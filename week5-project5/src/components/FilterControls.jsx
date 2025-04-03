@@ -29,7 +29,6 @@ const FilterControls = ({
 
   return (
     <div className="filter-controls">
-      {/* Region filter dropdown */}
       <div className="filter-group">
         <label htmlFor="region-filter">Filter by Region:</label>
         <select
