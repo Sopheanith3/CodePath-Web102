@@ -52,7 +52,7 @@ GIF created with ...
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+The overcome and challenge that I faced throughtout this project was fetching the API using URL link and not using the key number. Beside I also got stuck of fetching the API from the .env class, which I did use some reasone from the internet for help. Overall, everything else working perfect and smoothly. 
 
 ## License
 
