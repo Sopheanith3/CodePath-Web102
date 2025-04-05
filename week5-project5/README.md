@@ -2,7 +2,7 @@
 
 Submitted by: **Sopheanith Ny**
 
-This web app: **insert description**
+This web app: **This COVID-19 Global Tracker visualizes pandemic data worldwide, featuring real-time statistics, country-specific details, and interactive filtering by search, continent, and case counts, all in an intuitive, responsive interface powered by the Disease.sh API.**
 
 Time spent: **12** hours spent in total
 
