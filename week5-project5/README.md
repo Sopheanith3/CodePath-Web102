@@ -33,8 +33,7 @@ The following **optional** features are implemented:
 - [x] The user can enter specific bounds for filter values
 
 The following **additional** features are implemented:
-
-* [x] List anything else that you added to improve the site's functionality!
+ NA
 
 ## Video Walkthrough
 
