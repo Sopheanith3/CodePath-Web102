@@ -137,7 +137,6 @@ function App() {
               setCasesFilter={setCasesFilter}
             />
           </div>
-          
           <CountryList countries={filteredCountries} />
         </>
       )}
