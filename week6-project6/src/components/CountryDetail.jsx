@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import { useParams, Link } from 'react-router-dom'
-import './components/CountryDetail.css'
-import SummaryStats from './components/SummaryStats'
+import './CountryDetail.css'
+import SummaryStats from './SummaryStats'
 import Header from './Header'
 
 const CountryDetail = ({ countries }) => {

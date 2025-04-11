@@ -1,10 +1,13 @@
 import { useState, useEffect } from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './App.css'
 import Header from './components/Header'
 import SummaryStats from './components/SummaryStats'
 import CountryList from './components/CountryList'
+import CountryDetail from './components/CountryDetail'
 import SearchBar from './components/SearchBar'
 import FilterControls from './components/FilterControls'
+import DataCharts from './components/DataCharts'
 
 function App() {
   const [countries, setCountries] = useState([])
@@ -21,6 +24,9 @@ function App() {
     const fetchCovidData = async () => {
       try {
         setLoading(true)
+        
+        // Original API fetch (commented out since the API is down)
+        /*
         const countriesPromise = fetch(import.meta.env.VITE_API_COUNTRIES_ENDPOINT || 'https://disease.sh/v3/covid-19/countries')
         const globalPromise = fetch(import.meta.env.VITE_API_GLOBAL_ENDPOINT || 'https://disease.sh/v3/covid-19/all')
         
@@ -37,6 +43,30 @@ function App() {
           countriesResponse.json(),
           globalResponse.json()
         ])
+        */
+        
+        // Using local JSON files instead
+        const fetchLocalData = async () => {
+          try {
+            const countriesResponse = await fetch('/countries.json')
+            const globalResponse = await fetch('/global.json')
+            
+            if (!countriesResponse.ok || !globalResponse.ok) {
+              throw new Error(`Error loading local JSON: ${countriesResponse.status || globalResponse.status}`)
+            }
+            
+            return await Promise.all([
+              countriesResponse.json(),
+              globalResponse.json()
+            ])
+          } catch (error) {
+            console.error("Error loading JSON files:", error)
+            throw error
+          }
+        }
+        
+        const [countriesData, globalData] = await fetchLocalData()
+        
         setGlobalData(globalData)
         setCountries(countriesData)
         setFilteredCountries(countriesData)
@@ -104,44 +134,56 @@ function App() {
     ).country
   }
 
-  return (
-    <div className="app">
+  // Dashboard component to avoid duplication
+  const Dashboard = () => (
+    <>
       <Header />
       
-      {loading ? (
-        <div className="loading">Loading data...</div>
-      ) : error ? (
-        <div className="error">{error}</div>
-      ) : (
-        <>
-          <SummaryStats 
-            totalCases={getTotalCases()}
-            totalDeaths={getTotalDeaths()}
-            totalRecovered={getTotalRecovered()}
-            activeCases={getActiveCases()}
-            criticalCases={getCriticalCases()}
-            affectedCountries={getAffectedCountries()}
-            mostAffectedCountry={getMostAffectedCountry()}
-          />
-          
-          <div className="controls">
-            <SearchBar 
-              searchQuery={searchQuery} 
-              setSearchQuery={setSearchQuery} 
-            />
-            
-            <FilterControls 
-              regionFilter={regionFilter}
-              setRegionFilter={setRegionFilter}
-              casesFilter={casesFilter}
-              setCasesFilter={setCasesFilter}
-            />
-          </div>
-          
-          <CountryList countries={filteredCountries} />
-        </>
-      )}
-    </div>
+      <SummaryStats 
+        totalCases={getTotalCases()}
+        totalDeaths={getTotalDeaths()}
+        totalRecovered={getTotalRecovered()}
+        activeCases={getActiveCases()}
+        criticalCases={getCriticalCases()}
+        affectedCountries={getAffectedCountries()}
+        mostAffectedCountry={getMostAffectedCountry()}
+      />
+      
+      <DataCharts countries={countries} />
+      
+      <div className="controls">
+        <SearchBar 
+          searchQuery={searchQuery} 
+          setSearchQuery={setSearchQuery} 
+        />
+        
+        <FilterControls 
+          regionFilter={regionFilter}
+          setRegionFilter={setRegionFilter}
+          casesFilter={casesFilter}
+          setCasesFilter={setCasesFilter}
+        />
+      </div>
+      
+      <CountryList countries={filteredCountries} />
+    </>
+  )
+
+  return (
+    <Router>
+      <div className="app">
+        {loading ? (
+          <div className="loading">Loading data...</div>
+        ) : error ? (
+          <div className="error">{error}</div>
+        ) : (
+          <Routes>
+            <Route path="/" element={<Dashboard />} />
+            <Route path="/country/:countryId" element={<CountryDetail countries={countries} />} />
+          </Routes>
+        )}
+      </div>
+    </Router>
   )
 }
 

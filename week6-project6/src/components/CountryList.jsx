@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './CountryList.css'
 
 const CountryList = ({ countries }) => {
@@ -19,6 +20,7 @@ const CountryList = ({ countries }) => {
               <th>Active Cases</th>
               <th>Cases/Million</th>
               <th>Deaths/Million</th>
+              <th></th>
             </tr>
           </thead>
           <tbody>
@@ -40,6 +42,11 @@ const CountryList = ({ countries }) => {
                 <td>{country.active.toLocaleString()}</td>
                 <td>{country.casesPerOneMillion.toLocaleString()}</td>
                 <td>{country.deathsPerOneMillion.toLocaleString()}</td>
+                <td>
+                  <Link to={`/country/${country.country}`} className="view-details-btn">
+                    View Details
+                  </Link>
+                </td>
               </tr>
             ))}
           </tbody>
