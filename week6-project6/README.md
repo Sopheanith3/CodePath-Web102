@@ -53,6 +53,11 @@ GIF created with ...
 
 Describe any challenges encountered while building the app.
 
+When building this COVID-19 dashboard app, the biggest challenge I faced was the API being down. The website that provided COVID data (disease.sh) wasn't working, so my app couldn't fetch the information it needed.
+To solve this problem, I had to create a backup plan. I made two JSON files - one for global COVID statistics and another for country-specific data. These files contain sample data that my app can use when the API isn't available.
+I set up the code to try the original API first, but if that fails, it automatically switches to using my local JSON files instead. This way, the app always has data to display, even when the online source is down.
+This issue took a lot of time to troubleshoot and fix, but having a local backup makes the app much more reliable for user
+
 ## License
 
     Copyright [yyyy] [name of copyright owner]
