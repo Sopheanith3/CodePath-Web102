@@ -1,4 +1,4 @@
-# Web Development Project 6 - *Covid-19 Dashboard DATA II*
+# Web Development Project 7 - *Covid-19 Dashboard DATA II*
 
 Submitted by: **Sopheanith Ny**
 
@@ -60,7 +60,7 @@ This issue took a lot of time to troubleshoot and fix, but having a local backup
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright [2025] [Sopheanith Ny]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
