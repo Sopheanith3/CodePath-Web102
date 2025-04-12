@@ -38,7 +38,8 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-![Uploading 1-ezgif.com-speed.gif…]()
+![1 1](https://github.com/user-attachments/assets/86ec3d17-0650-4ba2-a46d-0619e647c0cd)
+
 
 
 <!-- Replace this with whatever GIF tool you used! -->
