@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+// Import the navigation.gif
+import navigationGif from '../assets/navigation.gif';
 
 const NavBar = () => {
   return (
@@ -8,9 +10,14 @@ const NavBar = () => {
       <Link to="/create">Create a Character</Link>
       <Link to="/gallery">Squad Gallery</Link>
       
-      {/* Optional small character image in navbar */}
+      {/* Using the navigation.gif in navbar with increased size */}
       <div className="nav-character">
-        <img src="/finn-icon.png" alt="Finn" className="nav-icon" />
+        <img 
+          src={navigationGif} 
+          alt="Navigation" 
+          className="nav-icon" 
+          style={{ width: '225px', height: '220px' }} // Adjust these values as needed
+        />
       </div>
     </nav>
   );

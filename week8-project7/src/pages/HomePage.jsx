@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import allCharImg from '../assets/allChar.png';
+import logoImg from '../assets/Cartoon-network-logo.png';
 
 const HomePage = () => {
   return (
@@ -12,18 +14,16 @@ const HomePage = () => {
         </p>
         
         <div className="home-image">
-          {/* You would need to add the actual cartoon network character images */}
+          {/* Using the imported images */}
           <img 
-            src="/cartoon-squad.png" 
+            src={allCharImg} 
             alt="Cartoon Network Characters" 
-            onError={(e) => {e.target.src = 'https://via.placeholder.com/800x400?text=Cartoon+Network+Characters'}}
           />
           
           <img 
-            src="/bloon.png" 
-            alt="Bloon Enemy" 
+            src={logoImg} 
+            alt="Cartoon Network Logo" 
             style={{marginTop: '2rem'}}
-            onError={(e) => {e.target.src = 'https://via.placeholder.com/400x200?text=Bloon+Enemy'}}
           />
         </div>
         
