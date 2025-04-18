@@ -62,7 +62,7 @@ const CharacterCard = ({ character, onDelete }) => {
       alert('Failed to delete character.');
     } else {
       alert(`${character.name} has been removed.`);
-      onDelete(); // refresh the list
+      onDelete(); 
     }
   };
 

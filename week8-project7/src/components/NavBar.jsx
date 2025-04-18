@@ -9,8 +9,7 @@ const NavBar = () => {
       <Link to="/">Home</Link>
       <Link to="/create">Create a Character</Link>
       <Link to="/gallery">Squad Gallery</Link>
-      
-      {/* Using the navigation.gif in navbar */}
+  
       <div className="nav-character">
         <img 
           src={navigationGif} 

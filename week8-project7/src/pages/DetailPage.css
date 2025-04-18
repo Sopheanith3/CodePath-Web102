@@ -1,4 +1,3 @@
-/* DetailPage.css */
 .detail-page {
   max-width: 800px;
   margin: 0 auto;
@@ -124,7 +123,6 @@
   color: #00bcd4;
 }
 
-/* Media queries for responsiveness */
 @media (max-width: 768px) {
   .character-content {
     flex-direction: column;

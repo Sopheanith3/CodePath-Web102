@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import { supabase } from '../utils/supabaseClient';
-// Import character images
 import AdventureTime from '../assets/AdventureTime.gif';
 import Ben10 from '../assets/Ben10.gif';
 import PowerPuffGirls from '../assets/PowerPuffGirls.gif';
@@ -49,7 +48,6 @@ const DetailPage = () => {
     fetchCharacter();
   }, [id, navigate]);
 
-  // Function to get character image
   const getCharacterImage = (name, show) => {
     const cleanName = name ? name.toLowerCase().trim() : '';
     
@@ -73,7 +71,6 @@ const DetailPage = () => {
     return DefaultCharacter;
   };
 
-  // Function to get power description
   const getPowerDescription = (power) => {
     switch(power) {
       case 'Super Strength':
@@ -97,7 +94,6 @@ const DetailPage = () => {
     }
   };
 
-  // Function to get show description
   const getShowDescription = (show) => {
     switch(show) {
       case 'Adventure Time':

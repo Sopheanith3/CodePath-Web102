@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import CharacterForm from '../components/CharacterForm';
 import { supabase } from '../utils/supabaseClient';
-// Import the createChar.png image
 import createCharImg from '../assets/createChar.png';
 
 const CreatePage = () => {
@@ -13,7 +12,6 @@ const CreatePage = () => {
     setIsLoading(true);
     
     try {
-      // Insert the new character into the database
       const { data, error } = await supabase
         .from('character')
         .insert([characterData])
@@ -24,10 +22,8 @@ const CreatePage = () => {
       }
       
       if (data && data.length > 0) {
-        // Success! Navigate to the gallery page
         navigate('/gallery');
       } else {
-        // Handle the case where no data was returned
         alert('Failed to create character. Please try again.');
       }
     } catch (error) {
@@ -41,8 +37,6 @@ const CreatePage = () => {
   return (
     <div className="create-page">
       <h1>Create a New Character</h1>
-      
-      {/* Character creation illustration using imported image */}
       <div className="character-image" style={{textAlign: 'center', marginBottom: '2rem'}}>
         <img 
           src={createCharImg} 

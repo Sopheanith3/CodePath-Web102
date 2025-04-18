@@ -1,4 +1,3 @@
-/* Use your local font file */
 @font-face {
   font-family: 'Special Gothic Expanded One';
   src: url('./assets/font.ttf') format('truetype');
@@ -352,7 +351,6 @@ button:hover {
   margin: 0 auto;
 }
 
-/* Fun stats section */
 .fun-stats {
   background-color: #303030;
   padding: 1.5rem;
@@ -367,14 +365,13 @@ button:hover {
   font-family: 'Special Gothic Expanded One', sans-serif;
 }
 
-/* Character name and section titles */
+
 .character-name,
 .section-title {
   font-family: 'Special Gothic Expanded One', sans-serif;
   color: #00bcd4;
 }
 
-/* Special Gothic class for applying to specific elements */
 .special-gothic {
   font-family: 'Special Gothic Expanded One', sans-serif;
 }

@@ -31,7 +31,6 @@
   font-style: italic;
 }
 
-/* 🔧 Grid Layout for Cards */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -131,7 +130,6 @@
   background-color: #c62828;
 }
 
-/* Glow outlines per show */
 .glow-adventure-time {
   box-shadow: 0 0 10px 2px #1e88e5;
 }
@@ -156,7 +154,6 @@
   box-shadow: 0 0 10px 2px #888;
 }
 
-/* Empty state */
 .empty-state {
   text-align: center;
   padding: 2rem;

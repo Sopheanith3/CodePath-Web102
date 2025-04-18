@@ -8,7 +8,7 @@ import DetailPage from './pages/DetailPage';
 import UpdatePage from './pages/UpdatePage';
 
 function App() {
-  console.log("App rendering"); // Add this line for debugging
+  console.log("App rendering"); 
   
   return (
     <Router>

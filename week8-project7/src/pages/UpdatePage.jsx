@@ -57,7 +57,6 @@ const UpdatePage = () => {
       }
       
       if (data && data.length > 0) {
-        // Success! Navigate to the detail page
         navigate(`/character/${id}`);
       } else {
         alert('Failed to update character. Please try again.');
@@ -83,7 +82,6 @@ const UpdatePage = () => {
           throw error;
         }
         
-        // Success! Navigate to the gallery page
         navigate('/gallery');
       } catch (error) {
         console.error('Error deleting character:', error);
