@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './CharacterForm.css'; // <-- Link the CSS file
+import './CharacterForm.css'; 
 
 const CharacterForm = ({ onSubmit, buttonText }) => {
   const [characterName, setCharacterName] = useState('');
