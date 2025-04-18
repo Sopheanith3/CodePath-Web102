@@ -5,6 +5,7 @@ import Ben10 from '../assets/Ben10.gif';
 import PowerPuffGirls from '../assets/PowerPuffGirls.gif';
 import RegularShow from '../assets/RegularShow.gif';
 import AmazingWorldofGumball from '../assets/AmazingWorldofGumball.gif';
+import TeenTitans from '../assets/TeenTitans.gif'; 
 import DefaultCharacter from '../assets/allChar.png';
 import { supabase } from '../utils/supabaseClient';
 import './CharacterCard.css';
@@ -14,32 +15,37 @@ const CharacterCard = ({ character, onDelete }) => {
 
   const getCharacterImage = (name, show) => {
     const cleanName = name.toLowerCase().trim();
+    const cleanShow = show.toLowerCase().trim();
 
     if (cleanName.includes('finn') || cleanName.includes('jake')) return AdventureTime;
     if (cleanName.includes('ben') || cleanName.includes('tennyson')) return Ben10;
     if (cleanName.includes('blossom') || cleanName.includes('bubbles') || cleanName.includes('buttercup')) return PowerPuffGirls;
     if (cleanName.includes('mordecai') || cleanName.includes('rigby')) return RegularShow;
     if (cleanName.includes('gumball')) return AmazingWorldofGumball;
+    if (cleanName.includes('robin') || cleanName.includes('raven') || cleanName.includes('cyborg') || cleanShow === 'teen titans') return TeenTitans;
 
-    switch (show) {
-      case 'Adventure Time': return AdventureTime;
-      case 'Ben 10': return Ben10;
-      case 'Powerpuff Girls': return PowerPuffGirls;
-      case 'Regular Show': return RegularShow;
-      case 'Amazing World of Gumball': return AmazingWorldofGumball;
+    switch (cleanShow) {
+      case 'adventure time': return AdventureTime;
+      case 'ben 10': return Ben10;
+      case 'powerpuff girls': return PowerPuffGirls;
+      case 'regular show': return RegularShow;
+      case 'amazing world of gumball': return AmazingWorldofGumball;
+      case 'teen titans': return TeenTitans;
       default: return DefaultCharacter;
     }
   };
 
   const getShowClass = (show) => {
-    switch (show) {
-      case 'Adventure Time': return 'glow-adventure-time';
-      case 'Ben 10': return 'glow-ben10';
-      case 'Powerpuff Girls': return 'glow-powerpuff';
-      case 'Regular Show': return 'glow-regular';
-      case 'Amazing World of Gumball': return 'glow-gumball';
-      default: return 'glow-default';
-    }
+    const normalized = show.toLowerCase().trim();
+
+    if (normalized === 'teen titans') return 'glow-teen-titans';
+    if (normalized === 'adventure time') return 'glow-adventure-time';
+    if (normalized === 'ben 10') return 'glow-ben10';
+    if (normalized === 'powerpuff girls') return 'glow-powerpuff';
+    if (normalized === 'regular show') return 'glow-regular';
+    if (normalized === 'amazing world of gumball') return 'glow-gumball';
+
+    return 'glow-default';
   };
 
   const handleDelete = async () => {

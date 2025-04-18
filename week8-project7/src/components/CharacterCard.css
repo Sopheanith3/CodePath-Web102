@@ -62,6 +62,10 @@
   color: white;
 }
 
+.glow-teen-titans {
+  box-shadow: 0 0 15px 5px rgba(156, 39, 176, 0.6); 
+}
+
 .glow-adventure-time {
   box-shadow: 0 0 15px 5px rgba(52, 152, 219, 0.6); 
 }

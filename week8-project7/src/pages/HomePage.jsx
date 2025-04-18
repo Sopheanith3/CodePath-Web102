@@ -14,7 +14,6 @@ const HomePage = () => {
         </p>
         
         <div className="home-image">
-          {/* Using the imported images */}
           <img 
             src={allCharImg} 
             alt="Cartoon Network Characters" 
