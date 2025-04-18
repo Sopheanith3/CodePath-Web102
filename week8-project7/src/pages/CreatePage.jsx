@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import CharacterForm from '../components/CharacterForm';
 import { supabase } from '../utils/supabaseClient';
+// Import the createChar.png image
+import createCharImg from '../assets/createChar.png';
 
 const CreatePage = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -40,13 +42,12 @@ const CreatePage = () => {
     <div className="create-page">
       <h1>Create a New Character</h1>
       
-      {/* Optional character creation illustration */}
+      {/* Character creation illustration using imported image */}
       <div className="character-image" style={{textAlign: 'center', marginBottom: '2rem'}}>
         <img 
-          src="/character-creation.png" 
+          src={createCharImg} 
           alt="Character Creation" 
           style={{maxHeight: '200px'}}
-          onError={(e) => {e.target.src = 'https://via.placeholder.com/200x200?text=Character+Creation'}}
         />
       </div>
       
