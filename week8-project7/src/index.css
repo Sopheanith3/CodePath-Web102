@@ -1,10 +1,20 @@
+/* Use your local font file */
+@font-face {
+  font-family: 'Special Gothic Expanded One';
+  src: url('./assets/font.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 body {
   margin: 0;
-  font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+  font-family: 'Special Gothic Expanded One', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #121212;
   color: white;
+  font-weight: 100;
 }
 
 code {
@@ -44,6 +54,7 @@ code {
   padding: 1rem;
   transition: background-color 0.3s;
   font-weight: bold;
+  font-family: 'Special Gothic Expanded One', sans-serif;
 }
 
 .navbar a:hover {
@@ -69,6 +80,7 @@ h1, h2, h3 {
   margin: 1rem 0 2rem 0;
   color: #1e88e5;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-family: 'Special Gothic Expanded One', sans-serif;
 }
 
 /* Forms */
@@ -94,6 +106,7 @@ label {
   margin-bottom: 0.5rem;
   font-weight: bold;
   color: #4fc3f7;
+  font-family: 'Special Gothic Expanded One', sans-serif;
 }
 
 input[type="text"],
@@ -105,7 +118,7 @@ input[type="number"] {
   background-color: #202020;
   color: white;
   margin-bottom: 1rem;
-  font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+  font-family: 'Special Gothic Expanded One', sans-serif;
 }
 
 .power-options {
@@ -137,7 +150,7 @@ button {
   cursor: pointer;
   font-weight: bold;
   transition: background-color 0.3s;
-  font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+  font-family: 'Special Gothic Expanded One', sans-serif;
 }
 
 button:hover {
@@ -188,6 +201,7 @@ button:hover {
 
 .character-info p {
   margin: 0.5rem 0;
+  font-family: 'Special Gothic Expanded One', sans-serif;
 }
 
 .character-avatar {
@@ -268,11 +282,13 @@ button:hover {
 .empty-state {
   text-align: center;
   padding: 3rem;
+  font-family: 'Special Gothic Expanded One', sans-serif;
 }
 
 .loading {
   text-align: center;
   padding: 2rem;
+  font-family: 'Special Gothic Expanded One', sans-serif;
 }
 
 /* Current Info */
@@ -282,6 +298,7 @@ button:hover {
   border-radius: 8px;
   margin-bottom: 1.5rem;
   text-align: center;
+  font-family: 'Special Gothic Expanded One', sans-serif;
 }
 
 /* Home Page */
@@ -300,6 +317,7 @@ button:hover {
   font-size: 1.2rem;
   text-align: center;
   margin-bottom: 2rem;
+  font-family: 'Special Gothic Expanded One', sans-serif;
 }
 
 .home-image {
@@ -346,4 +364,17 @@ button:hover {
 .stat-highlight {
   font-weight: bold;
   color: #4fc3f7;
+  font-family: 'Special Gothic Expanded One', sans-serif;
+}
+
+/* Character name and section titles */
+.character-name,
+.section-title {
+  font-family: 'Special Gothic Expanded One', sans-serif;
+  color: #00bcd4;
+}
+
+/* Special Gothic class for applying to specific elements */
+.special-gothic {
+  font-family: 'Special Gothic Expanded One', sans-serif;
 }
