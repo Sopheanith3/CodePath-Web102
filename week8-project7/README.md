@@ -2,7 +2,7 @@
 
 Submitted by: **Sopheanith Ny**
 
-This web app: **insert description**
+This web app: **This web app lets users create their own Cartoon Network squad, inspired by classic characters from popular shows. Users can add, edit, and delete characters to build their dream team. The app is connected to Supabase, which works like Firebase, and helps store and manage all the squad data in a database.**
 
 Time spent: **18** hours spent in total
 
@@ -40,7 +40,8 @@ The following **optional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-![Uploading gif.gif…]()
+![gif](https://github.com/user-attachments/assets/6b758f94-57ab-4ba2-ab31-f2d6ae9ece22)
+
 
 
 <!-- Replace this with whatever GIF tool you used! -->
@@ -52,11 +53,11 @@ GIF created with ...
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+The one challenge that was setting up Supabase and connecting it to the app so data could be saved and updated properly. It also took some time to make sure the create, edit, and delete features worked smoothly without breaking anything.
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright [2025] [Sopheanith Ny]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
