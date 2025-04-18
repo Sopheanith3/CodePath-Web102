@@ -31,48 +31,71 @@
   font-style: italic;
 }
 
+/* 🔧 Grid Layout for Cards */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 1.5rem;
-  justify-content: center;
+  gap: 8.5rem;
   padding-top: 1rem;
+  align-items: stretch;
 }
 
 .card-link {
   text-decoration: none;
+  display: block;
+  height: 100%;
 }
 
-.empty-state {
-  margin-top: 4rem;
-}
-
-.empty-image {
-  max-width: 300px;
-  margin: 1.5rem 0;
-}
-
-.create-btn {
-  background-color: #00bfff;
-  color: white;
-  border: none;
-  padding: 10px 16px;
-  border-radius: 6px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.create-btn:hover {
-  background-color: #0095cc;
-}
-
-.character-actions {
-  margin-top: 1rem;
+/* ✅ Character Card fix */
+.character-card {
+  background-color: #303030;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
   display: flex;
-  gap: 0.5rem;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  height: 100%; 
+  width: 328px;
 }
 
+.character-card:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* Avatar image box */
+.character-avatar {
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.character-avatar img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.character-info p {
+  margin: 0.5rem 0;
+  font-family: 'Special Gothic Expanded One', sans-serif;
+}
+
+/* Buttons */
+.character-actions {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.view-button,
 .edit-button,
 .delete-button {
   padding: 6px 12px;
@@ -81,6 +104,16 @@
   border: none;
   cursor: pointer;
   font-weight: bold;
+  font-family: 'Special Gothic Expanded One', sans-serif;
+}
+
+.view-button {
+  background-color: #2196f3;
+  color: white;
+}
+
+.view-button:hover {
+  background-color: #1976d2;
 }
 
 .edit-button {
@@ -93,14 +126,40 @@
 }
 
 .delete-button {
-  background-color: #ff4d4d;
+  background-color: #f44336;
   color: white;
 }
 
 .delete-button:hover {
-  background-color: #cc0000;
+  background-color: #c62828;
 }
 
+/* Glow outlines per show */
+.glow-adventure-time {
+  box-shadow: 0 0 10px 2px #1e88e5;
+}
+
+.glow-ben10 {
+  box-shadow: 0 0 10px 2px #4caf50;
+}
+
+.glow-powerpuff {
+  box-shadow: 0 0 10px 2px #e91e63;
+}
+
+.glow-regular {
+  box-shadow: 0 0 10px 2px #a1887f;
+}
+
+.glow-gumball {
+  box-shadow: 0 0 10px 2px #ff9800;
+}
+
+.glow-default {
+  box-shadow: 0 0 10px 2px #888;
+}
+
+/* Empty state */
 .empty-state {
   text-align: center;
   padding: 2rem;
@@ -133,7 +192,7 @@
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
   cursor: pointer;
-  font-family: 'Comic Sans MS', cursive;
+  font-family: 'Special Gothic Expanded One', sans-serif;
 }
 
 .create-btn:hover {
