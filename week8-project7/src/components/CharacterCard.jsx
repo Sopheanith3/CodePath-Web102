@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import AdventureTime from '../assets/AdventureTime.gif';
 import Ben10 from '../assets/Ben10.gif';
 import PowerPuffGirls from '../assets/PowerPuffGirls.gif';
@@ -7,9 +7,11 @@ import RegularShow from '../assets/RegularShow.gif';
 import AmazingWorldofGumball from '../assets/AmazingWorldofGumball.gif';
 import DefaultCharacter from '../assets/allChar.png';
 import { supabase } from '../utils/supabaseClient';
-import './CharacterCard.css'; // Make sure to create this CSS file
+import './CharacterCard.css';
 
 const CharacterCard = ({ character, onDelete }) => {
+  const navigate = useNavigate();
+
   const getCharacterImage = (name, show) => {
     const cleanName = name.toLowerCase().trim();
 
@@ -30,7 +32,7 @@ const CharacterCard = ({ character, onDelete }) => {
   };
 
   const getShowClass = (show) => {
-    switch(show) {
+    switch (show) {
       case 'Adventure Time': return 'glow-adventure-time';
       case 'Ben 10': return 'glow-ben10';
       case 'Powerpuff Girls': return 'glow-powerpuff';
@@ -74,8 +76,9 @@ const CharacterCard = ({ character, onDelete }) => {
           <p><strong>Show:</strong> {character.show}</p>
         </div>
         <div className="character-actions">
+          <button className="view-button" onClick={() => navigate(`/character/${character.id}`)}>View</button>
           <Link to={`/update/${character.id}`}>
-            <button className="edit-button">Edit Character</button>
+            <button className="edit-button">Edit</button>
           </Link>
           <button className="delete-button" onClick={handleDelete}>Remove</button>
         </div>
