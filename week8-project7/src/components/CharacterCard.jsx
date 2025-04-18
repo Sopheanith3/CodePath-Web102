@@ -7,6 +7,7 @@ import RegularShow from '../assets/RegularShow.gif';
 import AmazingWorldofGumball from '../assets/AmazingWorldofGumball.gif';
 import DefaultCharacter from '../assets/allChar.png';
 import { supabase } from '../utils/supabaseClient';
+import './CharacterCard.css'; // Make sure to create this CSS file
 
 const CharacterCard = ({ character, onDelete }) => {
   const getCharacterImage = (name, show) => {
@@ -25,6 +26,17 @@ const CharacterCard = ({ character, onDelete }) => {
       case 'Regular Show': return RegularShow;
       case 'Amazing World of Gumball': return AmazingWorldofGumball;
       default: return DefaultCharacter;
+    }
+  };
+
+  const getShowClass = (show) => {
+    switch(show) {
+      case 'Adventure Time': return 'glow-adventure-time';
+      case 'Ben 10': return 'glow-ben10';
+      case 'Powerpuff Girls': return 'glow-powerpuff';
+      case 'Regular Show': return 'glow-regular';
+      case 'Amazing World of Gumball': return 'glow-gumball';
+      default: return 'glow-default';
     }
   };
 
@@ -47,7 +59,7 @@ const CharacterCard = ({ character, onDelete }) => {
   };
 
   return (
-    <div className="character-card">
+    <div className={`character-card ${getShowClass(character.show)}`}>
       <div className="character-card-inner">
         <div className="character-avatar">
           <img

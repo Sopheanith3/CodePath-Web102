@@ -1,0 +1,101 @@
+.character-card {
+  background-color: #303030;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  margin: 15px;
+  position: relative;
+  width: 350px;
+  height: 400px;
+}
+
+.character-card:hover {
+  transform: translateY(-5px) scale(1.03);
+  z-index: 1;
+}
+
+.character-card-inner {
+  padding: 1.5rem;
+}
+
+.character-avatar {
+  height: 180px; /* Increased from previous height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.character-avatar img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.character-info p {
+  margin: 0.5rem 0;
+  font-weight: bold;
+}
+
+.character-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.edit-button, .delete-button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.edit-button {
+  background-color: #00bcd4;
+  color: white;
+}
+
+.delete-button {
+  background-color: #f44336;
+  color: white;
+}
+
+.glow-adventure-time {
+  box-shadow: 0 0 15px 5px rgba(52, 152, 219, 0.6); 
+}
+
+.glow-ben10 {
+  box-shadow: 0 0 15px 5px rgba(46, 204, 113, 0.6); 
+}
+
+.glow-powerpuff {
+  box-shadow: 0 0 15px 5px rgba(231, 76, 60, 0.6);
+}
+
+.glow-regular {
+  box-shadow: 0 0 15px 5px rgba(155, 89, 182, 0.6); 
+}
+
+.glow-gumball {
+  box-shadow: 0 0 15px 5px rgba(241, 196, 15, 0.6);
+}
+
+.glow-default {
+  box-shadow: 0 0 15px 5px rgba(149, 165, 166, 0.6); 
+}
+
+@keyframes rainbow-glow {
+  0% { box-shadow: 0 0 15px 5px rgba(255, 0, 0, 0.6); }
+  16% { box-shadow: 0 0 15px 5px rgba(255, 165, 0, 0.6); }
+  33% { box-shadow: 0 0 15px 5px rgba(255, 255, 0, 0.6); }
+  50% { box-shadow: 0 0 15px 5px rgba(0, 255, 0, 0.6); }
+  66% { box-shadow: 0 0 15px 5px rgba(0, 0, 255, 0.6); }
+  83% { box-shadow: 0 0 15px 5px rgba(128, 0, 128, 0.6); }
+  100% { box-shadow: 0 0 15px 5px rgba(255, 0, 0, 0.6); }
+}
+
+.special-character {
+  animation: rainbow-glow 5s linear infinite;
+}

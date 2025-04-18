@@ -1,6 +1,15 @@
+// DetailPage.jsx
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import { supabase } from '../utils/supabaseClient';
+// Import character images
+import AdventureTime from '../assets/AdventureTime.gif';
+import Ben10 from '../assets/Ben10.gif';
+import PowerPuffGirls from '../assets/PowerPuffGirls.gif';
+import RegularShow from '../assets/RegularShow.gif';
+import AmazingWorldofGumball from '../assets/AmazingWorldofGumball.gif';
+import DefaultCharacter from '../assets/allChar.png';
+import './DetailPage.css';
 
 const DetailPage = () => {
   const { id } = useParams();
@@ -25,7 +34,6 @@ const DetailPage = () => {
         if (data) {
           setCharacter(data);
         } else {
-          // Character not found, navigate back to gallery
           alert('Character not found');
           navigate('/gallery');
         }
@@ -45,27 +53,24 @@ const DetailPage = () => {
   const getCharacterImage = (name, show) => {
     const cleanName = name ? name.toLowerCase().trim() : '';
     
-    if (cleanName.includes('finn')) return '/finn.png';
-    if (cleanName.includes('ben') || cleanName.includes('tennyson')) return '/ben10.png';
-    if (cleanName.includes('blossom')) return '/blossom.png';
-    if (cleanName.includes('marceline') || cleanName.includes('vampire')) return '/marceline.png';
-    if (cleanName.includes('gumball')) return '/gumball.png';
-    if (cleanName.includes('mojo')) return '/mojojojo.png';
+    if (cleanName.includes('finn') || cleanName.includes('jake')) return AdventureTime;
+    if (cleanName.includes('ben') || cleanName.includes('tennyson')) return Ben10;
+    if (cleanName.includes('blossom') || cleanName.includes('bubbles') || cleanName.includes('buttercup')) return PowerPuffGirls;
+    if (cleanName.includes('mordecai') || cleanName.includes('rigby')) return RegularShow;
+    if (cleanName.includes('gumball')) return AmazingWorldofGumball;
     
-    // If no match, determine a default based on the show
     if (show) {
       switch(show) {
-        case 'Adventure Time': return '/adventure-time-default.png';
-        case 'Ben 10': return '/ben10-default.png';
-        case 'Powerpuff Girls': return '/powerpuff-default.png';
-        case 'Regular Show': return '/regular-show-default.png';
-        case 'Amazing World of Gumball': return '/gumball-default.png';
-        case 'Teen Titans': return '/teen-titans-default.png';
-        default: return '/default-character.png';
+        case 'Adventure Time': return AdventureTime;
+        case 'Ben 10': return Ben10;
+        case 'Powerpuff Girls': return PowerPuffGirls;
+        case 'Regular Show': return RegularShow;
+        case 'Amazing World of Gumball': return AmazingWorldofGumball;
+        default: return DefaultCharacter;
       }
     }
     
-    return '/default-character.png';
+    return DefaultCharacter;
   };
 
   // Function to get power description
@@ -122,41 +127,51 @@ const DetailPage = () => {
 
   return (
     <div className="detail-page">
-      <h1>Character: {character.name}</h1>
+      <h1 className="character-title">Character: {character.name}</h1>
       
       <div className="detail-container">
-        <div className="detail-header">
-          <img 
-            src={getCharacterImage(character.name, character.show)} 
-            alt={character.name}
-            className="detail-image"
-            onError={(e) => {e.target.src = '/default-character.png'}}
-          />
+        <div className="character-name-container">
+          <h2 className="character-name">{character.name}</h2>
+        </div>
+        
+        <div className="character-content">
+          <div className="character-image">
+            <img 
+              src={getCharacterImage(character.name, character.show)} 
+              alt={character.name}
+              onError={(e) => {e.target.src = DefaultCharacter}}
+            />
+          </div>
           
-          <div>
-            <h2>{character.name}</h2>
+          <div className="character-info">
             <p><strong>From:</strong> {character.show}</p>
             <p><strong>Power:</strong> {character.power}</p>
           </div>
         </div>
         
-        <div className="detail-stats">
-          <h3>Power Details</h3>
-          <p>{getPowerDescription(character.power)}</p>
+        <div className="character-details">
+          <div className="detail-section">
+            <h3 className="section-title">Power Details</h3>
+            <p>{getPowerDescription(character.power)}</p>
+          </div>
           
-          <h3>Show Background</h3>
-          <p>{getShowDescription(character.show)}</p>
+          <div className="detail-section">
+            <h3 className="section-title">Show Background</h3>
+            <p>{getShowDescription(character.show)}</p>
+          </div>
           
-          <h3>Combat Effectiveness</h3>
-          <p>This character would be particularly effective against Bloons with their {character.power} abilities, especially when teamed up with other characters from {character.show}!</p>
+          <div className="detail-section">
+            <h3 className="section-title">Combat Effectiveness</h3>
+            <p>This character would be particularly effective against Bloons with their {character.power} abilities, especially when teamed up with other characters from {character.show}!</p>
+          </div>
         </div>
         
         <div className="detail-actions">
           <Link to={`/update/${character.id}`}>
-            <button>Edit This Character</button>
+            <button className="edit-button">Edit This Character</button>
           </Link>
           <Link to="/gallery">
-            <button>Back to Squad</button>
+            <button className="back-button">Back to Squad</button>
           </Link>
         </div>
       </div>
