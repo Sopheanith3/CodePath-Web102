@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import CharacterCard from '../components/CharacterCard';
 import { supabase } from '../utils/supabaseClient';
+import placeholderImg from '../assets/placeholder.gif';
 import '../pages/GalleryPage.css';
 
 const GalleryPage = () => {
@@ -77,15 +78,19 @@ const GalleryPage = () => {
       ) : characters.length === 0 ? (
         <div className="empty-state">
           <p>You haven't created any characters yet!</p>
-          <img
-            src="/empty-squad.png"
-            alt="Empty Squad"
-            className="empty-image"
-            onError={(e) => { e.target.src = 'https://via.placeholder.com/300x200?text=Empty+Squad'; }}
-          />
-          <a href="/create">
-            <button className="create-btn">Create One Here</button>
-          </a>
+          <div className="empty-content">
+            <img
+              src="/empty-squad.png"
+              alt="Empty Squad"
+              className="empty-image"
+              onError={(e) => {e.target.src = placeholderImg}}
+            />
+            <div className="empty-action">
+              <a href="/create">
+                <button className="create-btn">Create One Here</button>
+              </a>
+            </div>
+          </div>
         </div>
       ) : (
         <>
