@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { formatDistanceToNow } from 'date-fns';
 import supabase from '../supabase';
+import './PostCard.css';
 
 function PostCard({ post }) {
   const formattedDate = formatDistanceToNow(new Date(post.created_at), { addSuffix: true });

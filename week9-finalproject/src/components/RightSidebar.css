@@ -1,0 +1,42 @@
+/* Right Sidebar Styles */
+.right-sidebar {
+  background-color: var(--reddit-navbar);
+  border-radius: 4px;
+  margin-bottom: 16px;
+  overflow: hidden;
+  color: #d7dadc;
+}
+
+.right-sidebar-header {
+  padding: 12px;
+  background-color: #0079d3;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.right-sidebar-content {
+  padding: 12px;
+}
+
+.community-info {
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.sidebar-button {
+  width: 100%;
+  background-color: var(--reddit-blue);
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 0;
+  font-size: 14px;
+  font-weight: 700;
+  margin-top: 12px;
+  cursor: pointer;
+}
+
+.sidebar-button:hover {
+  background-color: #005fa3;
+}
