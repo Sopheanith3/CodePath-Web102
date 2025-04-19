@@ -1,0 +1,48 @@
+/* Edit Post Styles - extends CreatePost styles */
+.edit-post-container {
+  background-color: var(--reddit-navbar);
+  border-radius: 4px;
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  color: #d7dadc;
+}
+
+.edit-post-title {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 16px;
+  color: #d7dadc;
+}
+
+/* Button container for Edit Post page */
+.edit-post-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+/* Style for cancel button */
+.cancel-button {
+  background-color: #878a8c;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 24px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.cancel-button:hover {
+  background-color: #6c6e70;
+}
+
+/* Loading state */
+.loading-message {
+  color: #d7dadc;
+  padding: 20px;
+  text-align: center;
+  background-color: var(--reddit-navbar);
+  border-radius: 4px;
+  margin-bottom: 16px;
+}

@@ -1,0 +1,82 @@
+/* PostPage Styles */
+.post-page-container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Modify post-card styles for single post view */
+.post-page-container .post-card {
+  margin-bottom: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.post-page-container .post-title {
+  font-size: 20px; /* Larger title on post page */
+}
+
+.post-page-container .post-body {
+  font-size: 16px; /* Larger body text on post page */
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+/* Loading and error states */
+.loading-message,
+.error-message {
+  color: #d7dadc;
+  padding: 20px;
+  text-align: center;
+  background-color: var(--reddit-navbar);
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+
+.error-message {
+  color: #ff7672;
+}
+
+/* Style for the delete confirmation dialog */
+.delete-confirmation {
+  background-color: var(--reddit-navbar);
+  border: 1px solid #343536;
+  border-radius: 4px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.delete-confirmation-message {
+  margin-bottom: 16px;
+  color: #ff7672;
+}
+
+.delete-confirmation-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.confirm-delete-button {
+  background-color: #ff7672;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 24px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.confirm-delete-button:hover {
+  background-color: #e05e5a;
+}
+
+.cancel-delete-button {
+  background-color: #878a8c;
+  color: white; 
+  border: none;
+  border-radius: 20px;
+  padding: 8px 24px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}

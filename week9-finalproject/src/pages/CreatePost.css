@@ -1,0 +1,66 @@
+/* Create Post Styles */
+.create-post-container {
+  background-color: var(--reddit-navbar);
+  border-radius: 4px;
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  color: #d7dadc;
+}
+
+.create-post-title {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 16px;
+  color: #d7dadc;
+}
+
+.create-post-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #343536;
+  border-radius: 4px;
+  margin-bottom: 12px;
+  font-size: 14px;
+  background-color: #1a1a1b;
+  color: #d7dadc;
+}
+
+.create-post-textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #343536;
+  border-radius: 4px;
+  margin-bottom: 12px;
+  font-size: 14px;
+  min-height: 120px;
+  resize: vertical;
+  background-color: #1a1a1b;
+  color: #d7dadc;
+}
+
+.create-post-button {
+  background-color: var(--reddit-blue);
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 24px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.create-post-button:hover {
+  background-color: #005fa3;
+}
+
+.create-post-button:disabled {
+  background-color: #343536;
+  cursor: not-allowed;
+}
+
+.error-message {
+  color: #ff7672;
+  margin-bottom: 10px;
+  font-size: 14px;
+}

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import supabase from '../supabase';
+import './CreatePost.css';
 
 function CreatePost() {
   const [title, setTitle] = useState('');

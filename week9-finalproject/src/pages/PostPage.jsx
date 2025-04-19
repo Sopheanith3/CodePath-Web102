@@ -3,6 +3,7 @@ import { useParams, Link, useNavigate } from 'react-router-dom';
 import { formatDistanceToNow } from 'date-fns';
 import supabase from '../supabase';
 import CommentSection from '../components/CommentSection';
+import './PostPage.css';
 
 function PostPage() {
   const { id } = useParams();

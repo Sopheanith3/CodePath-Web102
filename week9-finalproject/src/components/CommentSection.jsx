@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { formatDistanceToNow } from 'date-fns';
 import supabase from '../supabase';
+import './CommentSection.css';
 
 function CommentSection({ postId, comments: initialComments }) {
   const [comments, setComments] = useState(initialComments || []);
