@@ -22,8 +22,15 @@
   margin-right: 20px;
 }
 
-.navbar-logo img {
+/* Reddit logo styles */
+.reddit-logo {
+  display: flex;
+  align-items: center;
+}
+
+.reddit-logo svg {
   height: 32px;
+  width: 32px;
 }
 
 .navbar-logo-text {
@@ -69,6 +76,7 @@
   display: flex;
   align-items: center;
   margin-left: auto;
+  gap: 8px; /* Added gap to ensure spacing between buttons */
 }
 
 .navbar-button {
@@ -76,8 +84,11 @@
   font-size: 14px;
   font-weight: 700;
   padding: 4px 16px;
-  margin-left: 8px;
   cursor: pointer;
+  height: 32px; /* Fixed height for all buttons */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .login-button {
