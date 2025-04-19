@@ -7,6 +7,7 @@ import Home from './pages/Home';
 import CreatePost from './pages/CreatePost';
 import PostPage from './pages/PostPage';
 import EditPost from './pages/EditPost';
+import './App.css';
 
 function App() {
   return (
@@ -15,19 +16,20 @@ function App() {
         <Navbar />
         <div className="content-container">
           <LeftSidebar />
-          <main className="main-content">
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/create" element={<CreatePost />} />
-              <Route path="/post/:id" element={<PostPage />} />
-              <Route path="/edit/:id" element={<EditPost />} />
-            </Routes>
-          </main>
-          <RightSidebar />
+          <div className="main-content-wrapper">
+            <main className="main-content">
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/create" element={<CreatePost />} />
+                <Route path="/post/:id" element={<PostPage />} />
+                <Route path="/edit/:id" element={<EditPost />} />
+              </Routes>
+            </main>
+            <RightSidebar />
+          </div>
         </div>
       </div>
     </Router>
-    
   );
 }
 
