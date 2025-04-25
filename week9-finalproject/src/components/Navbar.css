@@ -22,17 +22,6 @@
   margin-right: 20px;
 }
 
-/* Reddit logo styles */
-.reddit-logo {
-  display: flex;
-  align-items: center;
-}
-
-.reddit-logo svg {
-  height: 32px;
-  width: 32px;
-}
-
 .navbar-logo-text {
   color: #fff;
   font-weight: 700;
@@ -101,4 +90,28 @@
   background-color: transparent;
   color: #d7dadc;
   border: 1px solid #d7dadc;
+}
+
+.champions-logo {
+  display: flex;
+  align-items: center;
+}
+
+.champions-logo img {
+  height: 32px;
+  width: 32px;
+  object-fit: contain;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.navbar-logo-text {
+  color: #fff;
+  font-weight: 700;
+  font-size: 18px;
+  margin-left: 8px;
 }

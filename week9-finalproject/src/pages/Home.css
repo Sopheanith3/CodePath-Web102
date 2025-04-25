@@ -144,3 +144,35 @@
 .sort-icon {
   margin-right: 6px;
 }
+
+/* Feed Toggle */
+.feed-toggle {
+  display: flex;
+  background-color: var(--reddit-navbar);
+  border-radius: 4px;
+  margin-bottom: 16px;
+  overflow: hidden;
+  border: 1px solid var(--reddit-border);
+}
+
+.feed-toggle-button {
+  flex: 1;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--reddit-dark-gray);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+}
+
+.feed-toggle-button.active {
+  color: #fff;
+  background-color: var(--reddit-blue);
+  border-bottom: 2px solid var(--reddit-blue);
+}
+
+.feed-toggle-button:hover:not(.active) {
+  background-color: var(--reddit-hover);
+}
