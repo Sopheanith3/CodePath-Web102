@@ -1,14 +1,23 @@
 /* Navbar Styles */
 .navbar {
-  background-color: var(--reddit-navbar);
-  height: 49px;
-  padding: 0 20px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
+  padding: 0 20px;
+  height: 49px;
+  background-color: var(--reddit-navbar);
   position: sticky;
   top: 0;
   z-index: 1000;
-  border-bottom: 1px solid #343536;
+  border-bottom: 1px solid #ffffff;
+}
+
+.navbar-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
 }
 
 .navbar-left {
@@ -26,10 +35,10 @@
   color: #fff;
   font-weight: 700;
   font-size: 18px;
-  margin-left: 8px;
+  line-height: 1;
 }
 
-.navbar-search {
+/* .navbar-search {
   flex: 1;
   max-width: 656px;
   position: relative;
@@ -59,7 +68,7 @@
   color: #d7dadc;
   border-color: #d7dadc;
   outline: none;
-}
+} */
 
 .navbar-right {
   display: flex;
@@ -107,11 +116,4 @@
   display: flex;
   align-items: center;
   margin-right: 20px;
-}
-
-.navbar-logo-text {
-  color: #fff;
-  font-weight: 700;
-  font-size: 18px;
-  margin-left: 8px;
 }
