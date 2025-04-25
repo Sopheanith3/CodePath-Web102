@@ -9,7 +9,7 @@ function Navbar() {
       <Link to="/" className="navbar-logo">
         <div className="champions-logo">
           <img 
-            src="/src/assets/UEFA_Champions_League.svg.png" 
+            src="/src/assets/uefa-logo.png" 
             alt="Champions League" 
             width="32" 
             height="32" 
