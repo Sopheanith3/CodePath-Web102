@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import LeftSidebar from './components/LeftSidebar';
+import LeftSidebar from './components/LeftSideBar';
 import RightSidebar from './components/RightSidebar';
 import Home from './pages/Home';
 import CreatePost from './pages/CreatePost';

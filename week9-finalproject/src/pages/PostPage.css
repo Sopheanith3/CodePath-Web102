@@ -16,11 +16,11 @@
 }
 
 .post-page-container .post-title {
-  font-size: 20px; /* Larger title on post page */
+  font-size: 20px; 
 }
 
 .post-page-container .post-body {
-  font-size: 16px; /* Larger body text on post page */
+  font-size: 16px; 
   line-height: 1.6;
   margin-bottom: 16px;
 }
