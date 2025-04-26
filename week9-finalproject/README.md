@@ -1,34 +1,34 @@
-# Web Development Final Project - *Name of App Here*
+# Web Development Final Project - *Champions Leagues Hub*
 
-Submitted by: **Your Name Here**
+Submitted by: **Sopheanith Ny**
 
-This web app: **insert description**
+This web app: **Champions League Hub is a dynamic community-driven web application where football fans can stay up to date on the latest Champions League news, matchups, and discussions. Users can browse trending posts, share match updates, and interact with others through comments and upvotes. The app features an intuitive layout with categorized leagues (e.g., Premier League, La Liga), upcoming match schedules, and community rules for respectful engagement. With a modern dark theme, built-in authentication, and real-time content updates, this platform offers an interactive and immersive experience for soccer enthusiasts.**
 
-Time spent: **X** hours spent in total
+Time spent: **19** hours spent in total
 
 ## Required Features
 
 The following **required** functionality is completed:
 
 
-- [ ] **Web app includes a create form that allows the user to create posts**
+- [x] **Web app includes a create form that allows the user to create posts**
   - Form requires users to add a post title
   - Forms should have the *option* for users to add: 
     - additional textual content
     - an image added as an external image URL
-- [ ] **Web app includes a home feed displaying previously created posts**
+- [x] **Web app includes a home feed displaying previously created posts**
   - Web app must include home feed displaying previously created posts
   - By default, each post on the posts feed should show only the post's:
     - creation time
     - title 
     - upvotes count
   - Clicking on a post should direct the user to a new page for the selected post
-- [ ] **Users can view posts in different ways**
+- [x] **Users can view posts in different ways**
   - Users can sort posts by either:
     -  creation time
     -  upvotes count
   - Users can search for posts by title
-- [ ] **Users can interact with each post in different ways**
+- [x] **Users can interact with each post in different ways**
   - The app includes a separate post page for each created post when clicked, where any additional information is shown, including:
     - content
     - image
@@ -38,38 +38,21 @@ The following **required** functionality is completed:
     - Each click increases the post's upvotes count by one
     - Users can upvote any post any number of times
 
-- [ ] **A post that a user previously created can be edited or deleted from its post pages**
+- [x] **A post that a user previously created can be edited or deleted from its post pages**
   - After a user creates a new post, they can go back and edit the post
   - A previously created post can be deleted from its post page
 
-The following **optional** features are implemented:
-
-
-- [ ] Web app implements pseudo-authentication
-  - Users can only edit and delete posts or delete comments by entering the secret key, which is set by the user during post creation
-  - **or** upon launching the web app, the user is assigned a random user ID. It will be associated with all posts and comments that they make and displayed on them
-  - For both options, only the original user author of a post can update or delete it
-- [ ] Users can repost a previous post by referencing its post ID. On the post page of the new post
-  - Users can repost a previous post by referencing its post ID
-  - On the post page of the new post, the referenced post is displayed and linked, creating a thread
-- [ ] Users can customize the interface
-  - e.g., selecting the color scheme or showing the content and image of each post on the home feed
-- [ ] Users can add more characterics to their posts
-  - Users can share and view web videos
-  - Users can set flags such as "Question" or "Opinion" while creating a post
-  - Users can filter posts by flags on the home feed
-  - Users can upload images directly from their local machine as an image file
-- [ ] Web app displays a loading animation whenever data is being fetched
 
 The following **additional** features are implemented:
 
-* [ ] List anything else that you added to improve the site's functionality!
+* [x] I need to update and fix the UI for the hub where I want to display the game schedule and more detail about scocer clubs.
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+![test1](https://github.com/user-attachments/assets/5676b9bc-31aa-494d-9c5b-321ba4c17912)
+
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ...  
@@ -80,11 +63,11 @@ GIF created with ...
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+There are no challenge beside fixing lots of bugs but I challenge that I faced is having a hard time finding API for soccer that are free so I just decide hard-coded.
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright [2025] [Sopheanith Ny]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
