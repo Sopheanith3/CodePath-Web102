@@ -5,7 +5,7 @@
   align-items: center;
   padding: 0 20px;
   height: 49px;
-  background-color: var(--reddit-navbar);
+  background-color: var(--champions-blue, #0e1e5b);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -38,43 +38,11 @@
   line-height: 1;
 }
 
-/* .navbar-search {
-  flex: 1;
-  max-width: 656px;
-  position: relative;
-  margin: 0 16px;
-}
-
-.navbar-search-input {
-  width: 100%;
-  background-color: #272729;
-  border: 1px solid #343536;
-  border-radius: 20px;
-  height: 36px;
-  padding: 0 16px 0 40px;
-  color: #d7dadc;
-  font-size: 14px;
-}
-
-.navbar-search-icon {
-  position: absolute;
-  left: 12px;
-  top: 8px;
-  color: #818384;
-}
-
-.navbar-search-input:focus {
-  background-color: #1a1a1b;
-  color: #d7dadc;
-  border-color: #d7dadc;
-  outline: none;
-} */
-
 .navbar-right {
   display: flex;
   align-items: center;
   margin-left: auto;
-  gap: 8px; /* Added gap to ensure spacing between buttons */
+  gap: 8px;
 }
 
 .navbar-button {
@@ -83,20 +51,20 @@
   font-weight: 700;
   padding: 4px 16px;
   cursor: pointer;
-  height: 32px; /* Fixed height for all buttons */
+  height: 32px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
 }
 
-.login-button {
-  background-color: var(--reddit-orange);
+.create-post-button {
+  background-color: var(--champions-light-blue, #00b7ff);
   color: #fff;
   border: none;
 }
 
-.signup-button {
-  background-color: transparent;
+.login-button {
+  background-color: var(--champions-blue, #0e1e5b);
   color: #d7dadc;
   border: 1px solid #d7dadc;
 }
@@ -110,10 +78,4 @@
   height: 32px;
   width: 32px;
   object-fit: contain;
-}
-
-.navbar-logo {
-  display: flex;
-  align-items: center;
-  margin-right: 20px;
 }
