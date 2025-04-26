@@ -2,6 +2,9 @@
 .post-page-container {
   display: flex;
   flex-direction: column;
+  background-color: #1a1a1b;
+  border-radius: 4px;
+  overflow: hidden;
 }
 
 /* Modify post-card styles for single post view */
@@ -9,6 +12,7 @@
   margin-bottom: 0;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
+  border: 1px solid #343536;
 }
 
 .post-page-container .post-title {
@@ -79,4 +83,120 @@
   font-size: 14px;
   font-weight: 700;
   cursor: pointer;
+}
+
+/* Comments section styles */
+.comments-container {
+  background-color: var(--reddit-navbar);
+  border-radius: 4px;
+  padding: 16px;
+  margin-top: 0;
+  border: 1px solid #343536;
+  border-top: none;
+  color: #d7dadc;
+}
+
+.add-comment-form {
+  margin-bottom: 16px;
+}
+
+.add-comment-textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #343536;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  min-height: 100px;
+  resize: vertical;
+  background-color: #1a1a1b;
+  color: #d7dadc;
+  font-family: inherit;
+}
+
+.add-comment-textarea:focus {
+  outline: none;
+  border-color: #0079d3;
+}
+
+.add-comment-button {
+  background-color: var(--reddit-blue);
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 24px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.add-comment-button:hover {
+  background-color: #0060a8;
+}
+
+.add-comment-button:disabled {
+  background-color: #343536;
+  cursor: not-allowed;
+}
+
+.comment {
+  padding: 12px 0;
+  border-top: 1px solid #343536;
+}
+
+.comment:first-child {
+  border-top: none;
+}
+
+.comment-meta {
+  font-size: 12px;
+  color: var(--reddit-dark-gray);
+  margin-bottom: 6px;
+}
+
+.comment-author {
+  font-weight: 700;
+  color: #d7dadc;
+}
+
+.comment-content {
+  font-size: 14px;
+  margin-bottom: 8px;
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+.comment-actions {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 12px;
+  color: var(--reddit-dark-gray);
+}
+
+.comment-action {
+  display: flex;
+  align-items: center;
+  margin-right: 16px;
+  margin-bottom: 4px;
+  cursor: pointer;
+}
+
+.comment-action:hover {
+  color: #d7dadc;
+}
+
+.no-comments {
+  color: #878a8c;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 14px;
+}
+
+.post-image {
+  max-width: 100%;
+  max-height: 500px;
+  object-fit: contain;
+  border-radius: 4px;
+  margin-bottom: 16px;
 }

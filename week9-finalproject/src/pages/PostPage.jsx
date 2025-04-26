@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { formatDistanceToNow } from 'date-fns';
 import supabase from '../supabase';
-import CommentSection from '../components/CommentSection';
+import './PostPage.css';
 
-// Champions League mock posts with detailed data
+// Champions League mock posts
 const championsLeaguePosts = [
   {
     id: 1001,
@@ -12,7 +12,7 @@ const championsLeaguePosts = [
     avatar: '⚽',
     title: "Barcelona Making a Comeback 4-3 against Celta Vigo",
     content: "Barcelona pulled off a stunning comeback against Celta Vigo, winning 4-3 in a thrilling La Liga encounter. After Celta Vigo's Borja Iglesias scored a hat-trick to put his team ahead 3-1, Barcelona mounted a late resurgence. Substitute Dani Olmo scored to reduce the deficit, and then Raphinha headed in an equalizer. In the dying moments of the game, Raphinha scored a penalty to secure a dramatic victory for Barcelona.",
-    image_url: "https://picsum.photos/id/235/640/360",
+    image_url: "https://pbs.twimg.com/media/Go6SV0iXUAA6nPB?format=jpg&name=4096x4096",
     upvotes: 328,
     created_at: new Date(Date.now() - 3 * 60 * 60 * 1000).toISOString(), // 3 hours ago
     isMockData: true
@@ -23,7 +23,7 @@ const championsLeaguePosts = [
     avatar: '🔴',
     title: "Champions League Semifinals: Arsenal vs PSG Preview",
     content: "Arsenal will face PSG in what promises to be an exciting Champions League semifinal. After impressively knocking out Real Madrid in the quarterfinals, Arsenal have shown they can compete at the highest level. However, PSG look more able to expose Arsenal's defensive vulnerabilities with the pace of Dembélé and Kvaratskhelia up front. The midfield battle between Rice and PSG's Vitinha will be crucial. Both legs should provide high-scoring contests with the first match at Emirates Stadium next Tuesday.",
-    image_url: "https://picsum.photos/id/421/640/360",
+    image_url: "https://scontent-sea1-1.xx.fbcdn.net/v/t39.30808-6/491522503_1403676194456486_4503916489214234668_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=3XThXNN1-hkQ7kNvwFVK_aO&_nc_oc=AdnQkb9HN49DLhnly4CzjdzVkbLJTTb3t731NT3Yc6P7VCVyEOvE5nNrkr0KYca_WCg&_nc_zt=23&_nc_ht=scontent-sea1-1.xx&_nc_gid=0wNMNoXEZmPvpec1pSQhjA&oh=00_AfHqxyooYba9WCIrFa_Abz18jP7Nr9i8Up391aHBfZ083w&oe=68120EB6",
     upvotes: 245,
     created_at: new Date(Date.now() - 8 * 60 * 60 * 1000).toISOString(), // 8 hours ago
     isMockData: true
@@ -32,9 +32,9 @@ const championsLeaguePosts = [
     id: 1003,
     username: 'inter_milano',
     avatar: '⚫',
-    title: "Inter Milan vs Barcelona: Tactical Breakdown",
-    content: "The Champions League semifinal between Inter Milan and Barcelona pits the tournament's most prolific attacking side against its best defense. Barcelona have scored an impressive 37 goals in the competition this season, while Inter have conceded just five goals and kept eight clean sheets in 12 games. Barcelona's dynamic wingers Lamine Yamal and Raphinha will test Inter's defensive organization, but the Serie A champions have the experience to handle the pressure. The first leg at Camp Nou comes just three days after Barcelona's Copa del Rey final against Real Madrid, which could impact their performance.",
-    image_url: "https://picsum.photos/id/143/640/360",
+    title: "Champions League Semifinals: Inter Milan vs Barcelona",
+    content: "The Champions League semifinal first leg between Barcelona and Inter Milan is next Wednesday at 12 PM PT in Barcelona. The second leg in Milan is on Wednesday the following week at the same time.",
+    image_url: "https://www.fcbarcelona.com/photo-resources/2025/04/16/516123a4-cc70-46ff-b4a5-18b24c1cff62/inter_3200x2000_UCL2025-RIVAL-semis.jpg?width=1200&height=750",
     upvotes: 156,
     created_at: new Date(Date.now() - 14 * 60 * 60 * 1000).toISOString(), // 14 hours ago
     isMockData: true
@@ -45,7 +45,7 @@ const championsLeaguePosts = [
     avatar: '🔴',
     title: "Champions League Injury Update for Semifinalists",
     content: "All four Champions League semifinalists are facing significant injury concerns. Real Madrid will be without long-term absentees Thibaut Courtois and David Alaba, though Ferland Mendy is expected to return. Dortmund will miss Sebastian Haller for the rest of the season with an ankle injury, while Ramy Bensebaini is also unlikely to feature again this campaign due to a knee ligament injury. PSG received a boost with captain Marquinhos returning, but Presnel Kimpembe remains sidelined. Arsenal are concerned about Gabriel's absence in defense, which could be crucial against PSG's potent attack.",
-    image_url: "https://picsum.photos/id/866/640/360",
+    image_url: "https://image-service.onefootball.com/transform?w=840&h=630&dpr=2&image=https%3A%2F%2Ffootballtoday.com%2Fwp-content%2Fuploads%2F2022%2F10%2Fsoccer-nations-league-d6-netherlands-vs-belgium-scaled.jpg",
     upvotes: 189,
     created_at: new Date(Date.now() - 26 * 60 * 60 * 1000).toISOString(), // 26 hours ago
     isMockData: true
@@ -56,7 +56,7 @@ const championsLeaguePosts = [
     avatar: '🔵',
     title: "Lamine Yamal: The Breakthrough Star of Champions League 2024/25",
     content: "Barcelona's teenage sensation Lamine Yamal has been the breakthrough star of this Champions League campaign. At just 17 years old, he's already breaking records and terrorizing defenses across Europe. His combination of close control, acceleration, and decision-making belies his young age. In Barcelona's quarterfinal victory, he was instrumental with both goals and assists. As Barcelona prepare for their semifinal against Inter Milan, Yamal will be key to unlocking the Italian side's formidable defense. Could he become the youngest ever Champions League finalist if Barcelona progress?",
-    image_url: "https://picsum.photos/id/532/640/360",
+    image_url: "https://cdn.vox-cdn.com/thumbor/ZghPgJMahLgpVwfyrsxNrnRMteE=/0x0:4977x3318/920x613/filters:focal(2012x230:2808x1026):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/73753091/2181237996.0.jpg",
     upvotes: 277,
     created_at: new Date(Date.now() - 38 * 60 * 60 * 1000).toISOString(), // 38 hours ago
     isMockData: true
@@ -100,6 +100,8 @@ function PostPage() {
   const [comments, setComments] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [commentText, setCommentText] = useState('');
+  const [submittingComment, setSubmittingComment] = useState(false);
   
   useEffect(() => {
     // First, check if it's a Champions League post (IDs 1001-1005)
@@ -216,6 +218,70 @@ function PostPage() {
     }
   }
   
+  // New function to handle comment submission
+  async function handleCommentSubmit(e) {
+    e.preventDefault();
+    
+    if (!commentText.trim()) return;
+    
+    setSubmittingComment(true);
+    
+    if (post.isMockData) {
+      // Handle comment for mock post (in-memory only)
+      const newComment = {
+        id: Math.floor(Math.random() * 10000),
+        userId: 99,
+        username: 'footballfan',
+        avatar: '👤',
+        content: commentText,
+        createdAt: new Date()
+      };
+      
+      // Add to the mock comments if they exist, otherwise create new array
+      if (championsLeagueComments[post.id]) {
+        championsLeagueComments[post.id] = [newComment, ...championsLeagueComments[post.id]];
+      } else {
+        championsLeagueComments[post.id] = [newComment];
+      }
+      
+      // Update local state
+      setComments([newComment, ...comments]);
+      setCommentText('');
+      setSubmittingComment(false);
+    } else {
+      // Handle comment for real post (in Supabase)
+      try {
+        const { data, error } = await supabase
+          .from('comments')
+          .insert([
+            { 
+              post_id: post.id, 
+              content: commentText,
+              created_at: new Date().toISOString()
+            }
+          ])
+          .select();
+          
+        if (error) {
+          throw error;
+        }
+        
+        // Add the new comment to the list
+        if (data && data.length > 0) {
+          setComments([data[0], ...comments]);
+        }
+        
+        // Reset form
+        setCommentText('');
+      } catch (error) {
+        console.error('Error adding comment:', error);
+        alert('Failed to add comment. Please try again.');
+      } finally {
+        setSubmittingComment(false);
+      }
+    }
+  }
+  
   function formatRelativeTime(date) {
     if (!date) return "some time ago";
     
@@ -233,16 +299,16 @@ function PostPage() {
   }
   
   if (loading) {
-    return <div>Loading post...</div>;
+    return <div className="loading-message">Loading post...</div>;
   }
   
   if (error || !post) {
-    return <div>Error: {error || 'Post not found'}</div>;
+    return <div className="error-message">Error: {error || 'Post not found'}</div>;
   }
   
   return (
-    <div>
-      <div className="post-card" style={{ marginBottom: 0, borderBottomLeftRadius: 0, borderBottomRightRadius: 0 }}>
+    <div className="post-page-container">
+      <div className="post-card">
         <div className="post-votes">
           <button className="vote-button upvote" onClick={handleUpvote} aria-label="Upvote">
             ▲
@@ -269,7 +335,15 @@ function PostPage() {
           )}
           
           {post.image_url && (
-            <img src={post.image_url} alt={post.title} className="post-image" />
+            <img 
+              src={post.image_url} 
+              alt={post.title} 
+              className="post-image" 
+              onError={(e) => {
+                e.target.onerror = null; 
+                e.target.src = 'https://picsum.photos/640/360'; // Fallback image
+              }}
+            />
           )}
           
           <div className="post-actions">
@@ -322,19 +396,23 @@ function PostPage() {
       </div>
       
       <div className="comments-container">
-        <form className="add-comment-form">
-          <textarea
-            className="add-comment-textarea"
-            placeholder="What are your thoughts?"
-            rows="3"
-          ></textarea>
-          <button 
-            type="submit" 
-            className="add-comment-button" 
-          >
-            Comment
-          </button>
-        </form>
+      <form className="add-comment-form" onSubmit={handleCommentSubmit}>
+        <textarea
+          className="add-comment-textarea"
+          placeholder="What are your thoughts?"
+          rows="3"
+          value={commentText}
+          onChange={(e) => setCommentText(e.target.value)}
+          required
+        ></textarea>
+        <button 
+          type="submit" 
+          className="add-comment-button"
+          disabled={submittingComment || !commentText.trim()}
+        >
+          {submittingComment ? 'Posting...' : 'Comment'}
+        </button>
+      </form>
         
         <div className="comments-list">
           {comments.length > 0 ? (
@@ -342,7 +420,7 @@ function PostPage() {
               <div key={comment.id} className="comment">
                 <div className="comment-meta">
                   <span className="comment-author">
-                    {post.isMockData ? 
+                    {post.isMockData && comment.avatar ? 
                       `${comment.avatar} u/${comment.username}` : 
                       'u/footballfan'
                     }
@@ -376,7 +454,7 @@ function PostPage() {
               </div>
             ))
           ) : (
-            <p>No comments yet. Be the first to comment!</p>
+            <p className="no-comments">No comments yet. Be the first to comment!</p>
           )}
         </div>
       </div>
